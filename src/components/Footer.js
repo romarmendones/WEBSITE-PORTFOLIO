@@ -129,9 +129,9 @@ const Footer = () => {
           >
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <div className="space-y-3 text-secondary-300">
-              <p>San Francisco, CA</p>
-              <p>john@example.com</p>
-              <p>+1 (555) 123-4567</p>
+              <p>Mauban, Quezon</p>
+              <p>romarmendones24@gmail.com</p>
+              <p>09618105592</p>
             </div>
           </motion.div>
         </div>
@@ -144,7 +144,7 @@ const Footer = () => {
           className="border-t border-secondary-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
         >
           <div className="text-secondary-400 text-sm mb-4 md:mb-0">
-            © {currentYear} John Doe. All rights reserved.
+            © {currentYear} Rodanto Mari N.Mendones. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-4">

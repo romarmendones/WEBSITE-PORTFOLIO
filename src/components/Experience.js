@@ -13,62 +13,62 @@ const Experience = () => {
     {
       id: 1,
       title: 'Senior Full Stack Developer',
-      company: 'TechCorp Solutions',
-      location: 'San Francisco, CA',
-      period: '2022 - Present',
-      description: 'Leading development of enterprise web applications using React, Node.js, and cloud technologies. Mentoring junior developers and implementing best practices.',
+      company: '',
+      location: '',
+      period: '',
+      description: '',
       achievements: [
-        'Led a team of 5 developers in building a customer portal serving 10,000+ users',
-        'Improved application performance by 40% through optimization and caching strategies',
-        'Implemented CI/CD pipelines reducing deployment time by 60%',
-        'Mentored 3 junior developers and conducted code reviews'
+        '',
+        '',
+        '',
+        ''
       ],
-      technologies: ['React', 'Node.js', 'AWS', 'Docker', 'PostgreSQL']
+      technologies: ['', '', '', '', '']
     },
     {
       id: 2,
       title: 'Full Stack Developer',
-      company: 'InnovateWeb',
-      location: 'New York, NY',
-      period: '2020 - 2022',
-      description: 'Developed and maintained multiple client websites and web applications. Collaborated with design and marketing teams to deliver high-quality products.',
+      company: '',
+      location: '',
+      period: '',
+      description: '',
       achievements: [
-        'Built 15+ client websites with 99.9% uptime',
-        'Reduced page load times by 50% through optimization',
-        'Implemented responsive design for all projects',
-        'Maintained 100% client satisfaction rate'
+        '',
+        '',
+        '',
+        ''
       ],
-      technologies: ['React', 'JavaScript', 'PHP', 'MySQL', 'WordPress']
+      technologies: ['', '', '', '', '']
     },
     {
       id: 3,
       title: 'Frontend Developer',
-      company: 'Digital Creations',
-      location: 'Austin, TX',
-      period: '2019 - 2020',
-      description: 'Specialized in creating responsive and interactive user interfaces. Worked closely with UX designers to implement pixel-perfect designs.',
+      company: '',
+      location: '',
+      period: '',
+      description: '',
       achievements: [
-        'Developed 10+ interactive web applications',
-        'Created reusable component library used across projects',
-        'Achieved 95% accessibility compliance score',
-        'Reduced bug reports by 30% through improved code quality'
+        '',
+        '',
+        '',
+        ''
       ],
-      technologies: ['React', 'TypeScript', 'CSS3', 'Sass', 'Webpack']
+      technologies: ['', '', '', '', '']
     },
     {
       id: 4,
       title: 'Junior Developer',
-      company: 'StartUp Inc.',
-      location: 'Remote',
-      period: '2018 - 2019',
-      description: 'Started my professional journey as a junior developer, learning modern web technologies and contributing to various projects.',
+      company: '',
+      location: '',
+      period: '',
+      description: '',
       achievements: [
-        'Contributed to 5 different projects in first year',
-        'Learned React and modern JavaScript frameworks',
-        'Participated in code reviews and team meetings',
-        'Completed 3 certifications in web development'
+        '',
+        '',
+        '',
+        ''
       ],
-      technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Git']
+      technologies: ['', '', '', '', '']
     }
   ];
 
@@ -188,17 +188,17 @@ const Experience = () => {
           </h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="text-lg font-bold text-secondary-900 mb-2">Bachelor of Computer Science</h4>
-              <p className="text-secondary-600 mb-1">University of Technology</p>
-              <p className="text-sm text-secondary-500">2015 - 2019</p>
+              <h4 className="text-lg font-bold text-secondary-900 mb-2">Bachelor of Information Technology</h4>
+              <p className="text-secondary-600 mb-1">Manuel S. Enverga University Foundation</p>
+              <p className="text-sm text-secondary-500">2019 - 2025</p>
             </div>
             <div>
               <h4 className="text-lg font-bold text-secondary-900 mb-2">Certifications</h4>
               <ul className="space-y-1 text-sm text-secondary-600">
-                <li>• AWS Certified Developer Associate</li>
-                <li>• React Developer Certification</li>
-                <li>• Google Cloud Professional Developer</li>
-                <li>• MongoDB Database Administrator</li>
+                <li>• </li>
+                <li>•</li>
+                <li>• </li>
+                <li>• </li>
               </ul>
             </div>
           </div>

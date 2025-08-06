@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiCode, FiDatabase, FiCloud, FiSmartphone, FiPenTool } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCloud, FiSmartphone } from 'react-icons/fi';
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -55,18 +55,7 @@ const Skills = () => {
         { name: 'App Store Deployment', level: 70 },
       ]
     },
-    {
-      title: 'Design & Tools',
-      icon: FiPenTool,
-      skills: [
-        { name: 'Figma', level: 85 },
-        { name: 'Adobe XD', level: 80 },
-        { name: 'Photoshop', level: 70 },
-        { name: 'Sketch', level: 65 },
-        { name: 'User Research', level: 75 },
-        { name: 'Prototyping', level: 80 },
-      ]
-    }
+    
   ];
 
   return (
@@ -129,36 +118,6 @@ const Skills = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Additional Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 bg-white rounded-xl p-8 shadow-lg"
-        >
-          <h3 className="text-2xl font-bold text-secondary-900 mb-6 text-center">
-            Additional Skills & Tools
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              'MongoDB', 'PostgreSQL', 'Redis', 'Firebase',
-              'Jest', 'Cypress', 'Storybook', 'Webpack',
-              'Redux', 'Zustand', 'React Query', 'Socket.io',
-              'Stripe', 'PayPal', 'SendGrid', 'Twilio'
-            ].map((skill, index) => (
-              <motion.div
-                key={skill}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: 0.6 + index * 0.02 }}
-                className="bg-secondary-50 hover:bg-primary-50 rounded-lg p-3 text-center transition-colors duration-200"
-              >
-                <span className="text-sm font-medium text-secondary-700">{skill}</span>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -47,19 +47,19 @@ const Contact = () => {
     {
       icon: FiMail,
       title: 'Email',
-      value: 'john@example.com',
-      link: 'mailto:john@example.com'
+      value: 'romarmendones24@gmail.com',
+      link: ':romarmendones24@gmail.com'
     },
     {
       icon: FiPhone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: '09618105592',
+      link: 'tel:+639618105592'
     },
     {
       icon: FiMapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Mauban, Quezon',
       link: '#'
     }
   ];
@@ -68,19 +68,19 @@ const Contact = () => {
     {
       icon: FiGithub,
       name: 'GitHub',
-      url: 'https://github.com',
+      url: 'https://github.com/romarmendones',
       color: 'hover:text-gray-800'
     },
     {
       icon: FiLinkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com',
+      url: 'https://www.linkedin.com/in/romarmendones/',
       color: 'hover:text-blue-600'
     },
     {
       icon: FiTwitter,
       name: 'Twitter',
-      url: 'https://twitter.com',
+      url: 'https://x.com/romarmendones',
       color: 'hover:text-blue-400'
     }
   ];
