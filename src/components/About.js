@@ -102,8 +102,8 @@ const About = () => {
                 transition={{ duration: 0.4, delay: 0.6 }}
                 className="text-center p-4 bg-primary-50 rounded-lg"
               >
-                <div className="text-3xl font-bold text-primary-600 mb-2">5+</div>
-                <div className="text-sm text-secondary-600">Years Experience</div>
+                <div className="text-3xl font-bold text-primary-600 mb-2"></div>
+                <div className="text-sm text-secondary-600"></div>
               </motion.div>
               
               <motion.div
@@ -112,8 +112,8 @@ const About = () => {
                 transition={{ duration: 0.4, delay: 0.7 }}
                 className="text-center p-4 bg-secondary-50 rounded-lg"
               >
-                <div className="text-3xl font-bold text-secondary-600 mb-2">50+</div>
-                <div className="text-sm text-secondary-600">Projects Completed</div>
+                <div className="text-3xl font-bold text-secondary-600 mb-2"></div>
+                <div className="text-sm text-secondary-600"></div>
               </motion.div>
               
               <motion.div
@@ -122,8 +122,8 @@ const About = () => {
                 transition={{ duration: 0.4, delay: 0.8 }}
                 className="text-center p-4 bg-primary-50 rounded-lg"
               >
-                <div className="text-3xl font-bold text-primary-600 mb-2">20+</div>
-                <div className="text-sm text-secondary-600">Happy Clients</div>
+                <div className="text-3xl font-bold text-primary-600 mb-2"></div>
+                <div className="text-sm text-secondary-600"></div>
               </motion.div>
               
               <motion.div
@@ -132,8 +132,8 @@ const About = () => {
                 transition={{ duration: 0.4, delay: 0.9 }}
                 className="text-center p-4 bg-secondary-50 rounded-lg"
               >
-                <div className="text-3xl font-bold text-secondary-600 mb-2">15+</div>
-                <div className="text-sm text-secondary-600">Technologies</div>
+                <div className="text-3xl font-bold text-secondary-600 mb-2"></div>
+                <div className="text-sm text-secondary-600"></div>
               </motion.div>
             </div>
           </motion.div>
