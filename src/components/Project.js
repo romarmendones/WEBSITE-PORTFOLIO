@@ -20,7 +20,7 @@ const Projects = () => {
       category: 'web',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
       github: 'https://github.com',
-      live: 'https://example.com',
+      live: 'https://smartstocks.vercel.app/',
       featured: true
     },
     {
