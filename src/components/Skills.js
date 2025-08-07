@@ -37,12 +37,8 @@ const Skills = () => {
       title: 'Cloud & DevOps',
       icon: FiCloud,
       skills: [
-        { name: 'AWS', level: 75 },
-        { name: 'Docker', level: 80 },
-        { name: 'Git', level: 90 },
-        { name: 'CI/CD', level: 70 },
-        { name: 'Linux', level: 85 },
-        { name: 'Nginx', level: 70 },
+      { name: 'Git', level: 90 },
+       
       ]
     },
     {
