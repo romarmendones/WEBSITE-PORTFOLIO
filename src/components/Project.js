@@ -27,57 +27,17 @@ const Projects = () => {
       id: 2,
       title: 'Coffee Shop',
       description: 'A coffee shop website with a responsive design and smooth animations.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop',
+      image: require('../image/Coffee.jpg'),
       category: 'web',
-      technologies: ['React', 'Firebase', 'Tailwind CSS', 'Framer Motion'],
+      technologies: ['React', 'Supabase', 'Tailwind CSS', 'Framer Motion'],
       github: 'https://github.com',
-      live: 'https://example.com',
+      live: 'https://coffee-shop16.vercel.app/',
       featured: true
     },
-    {
-      id: 3,
-      title: 'Fitness Tracking Mobile App',
-      description: 'A React Native mobile app for fitness tracking with workout plans, progress monitoring, and social features.',
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&h=300&fit=crop',
-      category: 'mobile',
-      technologies: ['React Native', 'Expo', 'Firebase', 'Redux Toolkit'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: true
-    },
-    {
-      id: 4,
-      title: 'Portfolio Website',
-      description: 'A modern, responsive portfolio website built with React and Tailwind CSS, featuring smooth animations and optimal performance.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8b6def?w=500&h=300&fit=crop',
-      category: 'web',
-      technologies: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 5,
-      title: 'Weather Dashboard',
-      description: 'A weather application with real-time data, interactive maps, and detailed forecasts for multiple locations.',
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=500&h=300&fit=crop',
-      category: 'web',
-      technologies: ['React', 'OpenWeather API', 'Chart.js', 'Leaflet'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    },
-    {
-      id: 6,
-      title: 'Social Media Dashboard',
-      description: 'A comprehensive social media management dashboard with analytics, scheduling, and content management features.',
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop',
-      category: 'web',
-      technologies: ['Next.js', 'TypeScript', 'Prisma', 'PostgreSQL'],
-      github: 'https://github.com',
-      live: 'https://example.com',
-      featured: false
-    }
+    
+    
+    
+    
   ];
 
   const filters = [
