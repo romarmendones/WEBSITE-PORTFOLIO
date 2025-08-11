@@ -7,17 +7,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // Dark blue primary palette
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#eff4ff',
+          100: '#dbe6ff',
+          200: '#bdceff',
+          300: '#94afff',
+          400: '#6a8df2',
+          500: '#426ce0',
+          600: '#2f53b8',
+          700: '#233f90',
+          800: '#1b316f',
+          900: '#142451',
         },
         secondary: {
           50: '#f8fafc',
@@ -30,7 +31,9 @@ module.exports = {
           700: '#334155',
           800: '#1e293b',
           900: '#0f172a',
-        }
+        },
+        // Brand accent tuned to match dark blue palette
+        brand: '#1b316f'
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],
