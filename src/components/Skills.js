@@ -180,7 +180,7 @@ const Skills = () => {
                 onClick={() => goToPage(currentPage - 1)}
                 className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -left-3 top-1/2 bg-white/90 md:flex hover:bg-white border-white/50"
               >
-                <FiChevronLeft className="w-4 h-4 text-secondary-800" />
+                <FiChevronLeft className="w-4 h-4 text-secondary-900" />
               </button>
               <button
                 type="button"
@@ -188,13 +188,13 @@ const Skills = () => {
                 onClick={() => goToPage(currentPage + 1)}
                 className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/90 md:flex hover:bg-white border-white/50"
               >
-                <FiChevronRight className="w-4 h-4 text-secondary-800" />
+              <FiChevronRight className="w-4 h-4 text-secondary-900" />
               </button>
 
               <div
                 ref={scrollRef}
                 onScroll={handleScroll}
-                className="flex gap-8 px-6 py-2 overflow-x-auto snap-x snap-mandatory scroll-smooth"
+                className="flex gap-8 px-6 py-2 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
               >
                 {allSkills.map((skill) => {
                   const Icon = skillIconMap[skill.name];
@@ -203,7 +203,7 @@ const Skills = () => {
                       <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary-100 text-secondary-800">
                         {Icon ? <Icon className="w-10 h-10" /> : <span className="text-lg">{skill.name[0]}</span>}
                       </div>
-                      <div className="text-sm font-medium text-secondary-700">{skill.name}</div>
+                      <div className="text-sm font-medium text-secondary-800">{skill.name}</div>
                     </div>
                   );
                 })}
@@ -216,13 +216,17 @@ const Skills = () => {
                   key={i}
                   aria-label={`Go to slide ${i + 1}`}
                   onClick={() => goToPage(i)}
-                  className={`h-1.5 w-1.5 rounded-full transition-all ${i === currentPage ? 'w-3 bg-secondary-800' : 'bg-secondary-400/60'}`}
+                  className={`h-1.5 w-1.5 rounded-full transition-all ${i === currentPage ? 'w-3 bg-secondary-900' : 'bg-secondary-400/60'}`}
                 />)
               )}
             </div>
           </div>
         </div>
       </div>
+      <style>{`
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </section>
   );
 };
