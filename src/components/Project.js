@@ -15,8 +15,8 @@ const Projects = () => {
     {
       id: 1,
       title: 'SmartStocks',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, payment integration, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=300&fit=crop',
+        description: 'A  Capstone Project full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, payment integration, and admin dashboard.',
+      image:require('../image/SmartStocks.png'),
       category: 'web',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
       github: 'https://github.com',
