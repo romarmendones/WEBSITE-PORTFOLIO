@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiCode, FiDatabase, FiCloud, FiSmartphone } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCloud, FiSmartphone, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import {
+  SiReact,
+  SiJavascript,
+  SiTypescript,
+  SiCss3,
+  SiTailwindcss,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiExpress,
+  SiPython,
+  SiDjango,
+  SiSupabase,
+  SiGit,
+  SiFlutter,
+  SiFigma,
+  SiAppstore,
+  SiLaravel,
+} from 'react-icons/si';
 
 const Skills = () => {
   const [ref, inView] = useInView({
@@ -54,65 +72,155 @@ const Skills = () => {
     
   ];
 
+  const skillIconMap = {
+    'React.js': SiReact,
+    'JavaScript': SiJavascript,
+    'TypeScript': SiTypescript,
+    'HTML/CSS': SiCss3,
+    'Tailwind CSS': SiTailwindcss,
+    'Next.js': SiNextdotjs,
+    'Node.js': SiNodedotjs,
+    'Express.js': SiExpress,
+    'Python': SiPython,
+    'Django': SiDjango,
+    'Supabase': SiSupabase,
+    'Git': SiGit,
+    'React Native': SiReact,
+    'Flutter': SiFlutter,
+    'Mobile UI/UX': SiFigma,
+    'App Store Deployment': SiAppstore,
+    'Laravel': SiLaravel,
+  };
+
+  // Build a flat, unique skill list for the icon carousel
+  const allSkills = Array.from(
+    new Map(
+      skillCategories
+        .flatMap((c) => c.skills)
+        .map((s) => [s.name, s])
+    ).values()
+  );
+
+  const scrollRef = useRef(null);
+  const [itemsPerView, setItemsPerView] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  useEffect(() => {
+    const recalc = () => {
+      const container = scrollRef.current;
+      if (!container || container.children.length === 0) return;
+      const firstChild = container.children[0];
+      const childWidth = firstChild.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(container).columnGap || '0');
+      const per = Math.max(1, Math.floor((container.clientWidth + gap) / (childWidth + gap)));
+      setItemsPerView(per);
+      setCurrentPage(Math.round(container.scrollLeft / container.clientWidth));
+    };
+    recalc();
+    window.addEventListener('resize', recalc);
+    return () => window.removeEventListener('resize', recalc);
+  }, []);
+
+  const totalPages = Math.max(1, Math.ceil(allSkills.length / itemsPerView));
+
+  const handleScroll = () => {
+    const container = scrollRef.current;
+    if (!container) return;
+    setCurrentPage(Math.round(container.scrollLeft / container.clientWidth));
+  };
+
+  const goToPage = (index) => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const clamped = Math.max(0, Math.min(totalPages - 1, index));
+    container.scrollTo({ left: clamped * container.clientWidth, behavior: 'smooth' });
+    setCurrentPage(clamped);
+  };
+
   return (
-    <section id="skills" className="section-padding bg-gradient-to-br from-secondary-50 to-primary-50">
-      <div className="container-custom">
+    <section id="skills" className="relative overflow-hidden section-padding bg-gradient-to-br from-secondary-50 to-primary-50">
+      {/* Animated background accents */}
+      <motion.span
+        aria-hidden
+        className="absolute rounded-full pointer-events-none -top-24 -left-24 h-80 w-80 bg-primary-300/30 blur-3xl"
+        initial={{ scale: 0.9, rotate: 0, opacity: 0.5 }}
+        animate={{ scale: [0.9, 1.05, 0.9], rotate: [0, 30, 0], opacity: [0.45, 0.6, 0.45] }}
+        transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
+      />
+      <motion.span
+        aria-hidden
+        className="absolute rounded-full pointer-events-none -bottom-24 -right-24 h-96 w-96 bg-secondary-300/30 blur-3xl"
+        initial={{ scale: 1.1, rotate: 0, opacity: 0.5 }}
+        animate={{ scale: [1.1, 0.95, 1.1], rotate: [0, -25, 0], opacity: [0.45, 0.6, 0.45] }}
+        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+      />
+
+      <div className="relative container-custom">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-bold text-secondary-900 mb-4">
-            My <span className="gradient-text">Skills</span>
+          <h2 className="mb-4 text-4xl font-bold text-secondary-900">
+            MY <span className="gradient-text">SKILLS</span>
           </h2>
-          <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
-            A comprehensive overview of my technical expertise and proficiency levels
+          <p className="max-w-2xl mx-auto text-lg text-secondary-600">
+           
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
-          {skillCategories.map((category, categoryIndex) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
-              className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center">
-                  <category.icon className="w-5 h-5 text-primary-600" />
-                </div>
-                <h3 className="text-xl font-bold text-secondary-900">{category.title}</h3>
-              </div>
+        <div className="relative">
+          <div className="p-4 mx-auto border rounded-full shadow-inner bg-white/70 backdrop-blur border-white/40">
+            <div className="relative">
+              <button
+                type="button"
+                aria-label="Previous"
+                onClick={() => goToPage(currentPage - 1)}
+                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -left-3 top-1/2 bg-white/90 md:flex hover:bg-white border-white/50"
+              >
+                <FiChevronLeft className="w-4 h-4 text-secondary-800" />
+              </button>
+              <button
+                type="button"
+                aria-label="Next"
+                onClick={() => goToPage(currentPage + 1)}
+                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/90 md:flex hover:bg-white border-white/50"
+              >
+                <FiChevronRight className="w-4 h-4 text-secondary-800" />
+              </button>
 
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={inView ? { opacity: 1, x: 0 } : {}}
-                    transition={{ duration: 0.4, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
-                  >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-secondary-700">{skill.name}</span>
-                      <span className="text-sm font-bold text-primary-600">{skill.level}%</span>
+              <div
+                ref={scrollRef}
+                onScroll={handleScroll}
+                className="flex gap-8 px-6 py-2 overflow-x-auto snap-x snap-mandatory scroll-smooth"
+              >
+                {allSkills.map((skill) => {
+                  const Icon = skillIconMap[skill.name];
+                  return (
+                    <div key={skill.name} className="snap-start shrink-0 w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] flex flex-col items-center justify-center gap-3">
+                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary-100 text-secondary-800">
+                        {Icon ? <Icon className="w-10 h-10" /> : <span className="text-lg">{skill.name[0]}</span>}
+                      </div>
+                      <div className="text-sm font-medium text-secondary-700">{skill.name}</div>
                     </div>
-                    <div className="w-full bg-secondary-200 rounded-full h-2">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={inView ? { width: `${skill.level}%` } : {}}
-                        transition={{ duration: 1, delay: categoryIndex * 0.1 + skillIndex * 0.05 + 0.2 }}
-                        className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full"
-                      />
-                    </div>
-                  </motion.div>
-                ))}
+                  );
+                })}
               </div>
-            </motion.div>
-          ))}
+            </div>
+
+            <div className="flex items-center justify-center gap-2 mt-3">
+              {Array.from({ length: totalPages }).map((_, i) => (
+                <button
+                  key={i}
+                  aria-label={`Go to slide ${i + 1}`}
+                  onClick={() => goToPage(i)}
+                  className={`h-1.5 w-1.5 rounded-full transition-all ${i === currentPage ? 'w-3 bg-secondary-800' : 'bg-secondary-400/60'}`}
+                />)
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </section>
