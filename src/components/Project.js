@@ -41,10 +41,9 @@ const Projects = () => {
   ];
 
   const filters = [
-    { id: 'all', label: 'All Projects' },
     { id: 'web', label: 'Web Development' },
-    { id: 'mobile', label: 'Mobile Apps' },
-    { id: 'featured', label: 'Featured' }
+    { id: 'mobile', label: 'Mobile Development' },
+    
   ];
 
   const filteredProjects = projects.filter(project => {
