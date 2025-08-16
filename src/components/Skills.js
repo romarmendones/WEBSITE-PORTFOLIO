@@ -8,17 +8,14 @@ import {
   SiTypescript,
   SiCss3,
   SiTailwindcss,
-  SiNextdotjs,
   SiNodedotjs,
   SiExpress,
   SiPython,
-  SiDjango,
   SiSupabase,
   SiGit,
   SiFlutter,
   SiFigma,
   SiAppstore,
-  SiLaravel,
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -37,7 +34,7 @@ const Skills = () => {
         { name: 'TypeScript', level: 85 },
         { name: 'HTML/CSS', level: 95 },
         { name: 'Tailwind CSS', level: 90 },
-        { name: 'Next.js', level: 80 },
+        
       ]
     },
     {
@@ -47,7 +44,7 @@ const Skills = () => {
         { name: 'Node.js', level: 88 },
         { name: 'Express.js', level: 85 },
         { name: 'Python', level: 80 },
-        { name: 'Django', level: 75 },
+        
         { name: 'Supabase', level: 70 },
       ]
     },
@@ -78,18 +75,16 @@ const Skills = () => {
     'TypeScript': SiTypescript,
     'HTML/CSS': SiCss3,
     'Tailwind CSS': SiTailwindcss,
-    'Next.js': SiNextdotjs,
     'Node.js': SiNodedotjs,
     'Express.js': SiExpress,
     'Python': SiPython,
-    'Django': SiDjango,
     'Supabase': SiSupabase,
     'Git': SiGit,
     'React Native': SiReact,
     'Flutter': SiFlutter,
     'Mobile UI/UX': SiFigma,
     'App Store Deployment': SiAppstore,
-    'Laravel': SiLaravel,
+    
   };
 
   // Build a flat, unique skill list for the icon carousel

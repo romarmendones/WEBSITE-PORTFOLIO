@@ -44,7 +44,7 @@ const Hero = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mb-6 text-xl sm:text-2xl lg:text-3xl text-secondary-600"
           >
-            Full Stack Developer
+            Frontend Developer
           </motion.h2>
 
           {/* Description */}
