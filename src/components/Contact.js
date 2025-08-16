@@ -167,6 +167,8 @@ const Contact = () => {
                 ))}
               </div>
             </div>
+
+
           </motion.div>
 
           {/* Contact Form */}
