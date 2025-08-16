@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowDown, FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
+import { FiArrowDown, FiGithub, FiLinkedin, FiDownload } from 'react-icons/fi';
+import { SiGmail } from 'react-icons/si';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -102,7 +103,7 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="https://github.com"
+              href="https://github.com/romarmendones"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-secondary-100 hover:bg-primary-100 text-secondary-600 hover:text-primary-600"
@@ -113,7 +114,7 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/romarmendones/ "
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-secondary-100 hover:bg-primary-100 text-secondary-600 hover:text-primary-600"
@@ -124,10 +125,12 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="mailto:john@example.com"
-              className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-secondary-100 hover:bg-primary-100 text-secondary-600 hover:text-primary-600"
+              href="https://mail.google.com/mail/u/0/#inbox"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-secondary-100 hover:bg-red-100 text-secondary-600 hover:text-red-600"
             >
-              <FiMail className="w-6 h-6" />
+              <SiGmail className="w-6 h-6" />
             </motion.a>
           </motion.div>
         </div>

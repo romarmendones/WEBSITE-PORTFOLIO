@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter, FiArrowUp } from 'react-icons/fi';
+import { SiGmail } from 'react-icons/si';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -38,17 +39,17 @@ const Footer = () => {
       color: 'hover:text-blue-400'
     },
     {
-      icon: FiMail,
+      icon: SiGmail,
       name: 'Email',
-      url: 'mailto:john@example.com',
-      color: 'hover:text-red-600'
+      url: 'mailto:romarmendones24@gmail.com',
+      color: 'hover:text-red-600' 
     }
   ];
 
   return (
-    <footer className="bg-secondary-900 text-white">
-      <div className="container-custom px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+    <footer className="text-white bg-secondary-900">
+      <div className="px-4 py-12 container-custom sm:px-6 lg:px-8">
+        <div className="grid gap-8 md:grid-cols-4">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <motion.div
@@ -57,13 +58,13 @@ const Footer = () => {
               transition={{ duration: 0.6 }}
               className="mb-6"
             >
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-primary-400 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">P</span>
+              <div className="flex items-center mb-4 space-x-2">
+                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-r from-primary-600 to-primary-400">
+                  <span className="text-lg font-bold text-white">P</span>
                 </div>
                 <span className="text-xl font-bold">Portfolio</span>
               </div>
-              <p className="text-secondary-300 leading-relaxed max-w-md">
+              <p className="max-w-md leading-relaxed text-secondary-300">
                 A passionate Full Stack Developer creating innovative digital solutions 
                 and building the future of web technology.
               </p>
@@ -101,7 +102,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="mb-4 text-lg font-semibold">Quick Links</h3>
             <ul className="space-y-2">
               {footerLinks.map((link, index) => (
                 <motion.li
@@ -112,7 +113,7 @@ const Footer = () => {
                 >
                   <a
                     href={link.href}
-                    className="text-secondary-300 hover:text-primary-400 transition-colors duration-200"
+                    className="transition-colors duration-200 text-secondary-300 hover:text-primary-400"
                   >
                     {link.name}
                   </a>
@@ -127,7 +128,7 @@ const Footer = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <h3 className="mb-4 text-lg font-semibold">Contact Info</h3>
             <div className="space-y-3 text-secondary-300">
               <p>Mauban, Quezon</p>
               <p>romarmendones24@gmail.com</p>
@@ -141,19 +142,19 @@ const Footer = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="border-t border-secondary-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center"
+          className="flex flex-col items-center justify-between pt-8 mt-12 border-t border-secondary-800 md:flex-row"
         >
-          <div className="text-secondary-400 text-sm mb-4 md:mb-0">
+          <div className="mb-4 text-sm text-secondary-400 md:mb-0">
             © {currentYear} Rodanto Mari N.Mendones. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-4">
-            <span className="text-secondary-400 text-sm">Made with ❤️ using React & Tailwind</span>
+            <span className="text-sm text-secondary-400">Made with ❤️ using React & Tailwind</span>
             <motion.button
               onClick={scrollToTop}
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 bg-primary-600 hover:bg-primary-700 rounded-full flex items-center justify-center transition-colors duration-200"
+              className="flex items-center justify-center w-10 h-10 transition-colors duration-200 rounded-full bg-primary-600 hover:bg-primary-700"
             >
               <FiArrowUp className="w-5 h-5" />
             </motion.button>
