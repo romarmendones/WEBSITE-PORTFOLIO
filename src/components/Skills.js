@@ -13,9 +13,8 @@ import {
   SiPython,
   SiSupabase,
   SiGit,
-  SiFlutter,
-  SiFigma,
-  SiAppstore,
+  
+  
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -61,9 +60,9 @@ const Skills = () => {
       icon: FiSmartphone,
       skills: [
         { name: 'React Native', level: 75 },
-        { name: 'Flutter', level: 60 },
-        { name: 'Mobile UI/UX', level: 80 },
-        { name: 'App Store Deployment', level: 70 },
+       
+       
+        
       ]
     },
     
@@ -81,9 +80,7 @@ const Skills = () => {
     'Supabase': SiSupabase,
     'Git': SiGit,
     'React Native': SiReact,
-    'Flutter': SiFlutter,
-    'Mobile UI/UX': SiFigma,
-    'App Store Deployment': SiAppstore,
+    
     
   };
 

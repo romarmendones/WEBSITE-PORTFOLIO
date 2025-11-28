@@ -7,33 +7,33 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Dark blue primary palette
+        // Elegant Minimalism palette: Crisp white, light gray, and deep charcoal
         primary: {
-          50: '#eff4ff',
-          100: '#dbe6ff',
-          200: '#bdceff',
-          300: '#94afff',
-          400: '#6a8df2',
-          500: '#426ce0',
-          600: '#2f53b8',
-          700: '#233f90',
-          800: '#1b316f',
-          900: '#142451',
+          50: '#ffffff',
+          100: '#f9f9f9',
+          200: '#f3f3f3',
+          300: '#e8e8e8',
+          400: '#d4d4d4',
+          500: '#a0a0a0',
+          600: '#6b6b6b',
+          700: '#4a4a4a',
+          800: '#2d2d2d',
+          900: '#1a1a1a',
         },
         secondary: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          200: '#e2e8f0',
-          300: '#cbd5e1',
-          400: '#94a3b8',
-          500: '#64748b',
-          600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
+          50: '#ffffff',
+          100: '#f9f9f9',
+          200: '#f0f0f0',
+          300: '#e5e5e5',
+          400: '#d0d0d0',
+          500: '#b0b0b0',
+          600: '#808080',
+          700: '#5a5a5a',
+          800: '#3a3a3a',
+          900: '#1f1f1f',
         },
-        // Brand accent tuned to match dark blue palette
-        brand: '#1b316f'
+        // Brand accent - deep charcoal for minimalist elegance
+        brand: '#2d2d2d'
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],

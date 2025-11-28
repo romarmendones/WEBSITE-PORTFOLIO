@@ -132,8 +132,8 @@ const Contact = () => {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   className="flex items-center space-x-4 p-4 bg-secondary-50 rounded-lg hover:bg-primary-50 transition-colors duration-200 group"
                 >
-                  <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center group-hover:bg-primary-200 transition-colors duration-200">
-                    <info.icon className="w-6 h-6 text-primary-600" />
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200">
+                    <info.icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-secondary-900">{info.title}</h4>
@@ -160,9 +160,9 @@ const Contact = () => {
                     transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-12 h-12 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 transition-all duration-200 ${social.color}`}
+                    className={`w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 transition-all duration-200 ${social.color}`}
                   >
-                    <social.icon className="w-6 h-6" />
+                    <social.icon className="w-6 h-6 text-blue-600" />
                   </motion.a>
                 ))}
               </div>
@@ -176,7 +176,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-primary-50 to-secondary-50 rounded-xl p-8"
+            className="bg-gradient-to-br from-blue-50 to-secondary-50 rounded-xl p-8"
           >
             <h3 className="text-2xl font-bold text-secondary-900 mb-6">
               Send Message
@@ -195,7 +195,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                     placeholder="Your name"
                   />
                 </div>
@@ -228,7 +228,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   placeholder="What's this about?"
                 />
               </div>
@@ -244,7 +244,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>

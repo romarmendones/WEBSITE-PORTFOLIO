@@ -64,9 +64,9 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-secondary-700 hover:text-primary-600 font-medium transition-colors duration-200 flex items-center space-x-1"
+                className="text-secondary-700 hover:text-blue-600 font-medium transition-colors duration-200 flex items-center space-x-1"
               >
-                <item.icon className="w-4 h-4" />
+                <item.icon className="w-4 h-4 text-blue-500" />
                 <span>{item.name}</span>
               </motion.button>
             ))}
@@ -77,9 +77,9 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="text-secondary-700 hover:text-primary-600 p-2"
+              className="text-secondary-700 hover:text-blue-600 p-2"
             >
-              {isOpen ? <FiX className="w-6 h-6" /> : <FiMenu className="w-6 h-6" />}
+              {isOpen ? <FiX className="w-6 h-6 text-blue-500" /> : <FiMenu className="w-6 h-6 text-blue-500" />}
             </motion.button>
           </div>
         </div>
@@ -100,7 +100,7 @@ const Navbar = () => {
                 key={item.name}
                 whileHover={{ x: 5 }}
                 onClick={() => scrollToSection(item.href)}
-                className="w-full text-left px-3 py-2 text-secondary-700 hover:text-primary-600 hover:bg-primary-50 rounded-md transition-colors duration-200 flex items-center space-x-2"
+                className="w-full text-left px-3 py-2 text-secondary-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 flex items-center space-x-2"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>

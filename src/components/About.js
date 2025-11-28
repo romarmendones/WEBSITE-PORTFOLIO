@@ -54,8 +54,8 @@ const About = () => {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   className="flex items-center space-x-4"
                 >
-                  <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary-100">
-                    <info.icon className="w-5 h-5 text-primary-600" />
+                  <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-lg">
+                    <info.icon className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
                     <p className="text-sm font-medium text-secondary-500">{info.label}</p>
@@ -78,20 +78,12 @@ const About = () => {
                 MY STORY
               </h3>
               <p className="mb-4 leading-relaxed text-secondary-600">
-                I'm a passionate Full Stack Developer with over 5 years of experience in creating 
-                innovative digital solutions. My journey in technology began when I built my first 
-                website at the age of 16, and since then, I've been constantly learning and evolving.
-              </p>
-              <p className="mb-4 leading-relaxed text-secondary-600">
-                I specialize in modern web technologies including React, Node.js, and cloud platforms. 
-                My approach combines technical expertise with creative problem-solving, ensuring that 
-                every project I work on is not only functional but also delivers an exceptional user experience.
+               Motivated Junior Web Developer with hands-on experience in building responsive and user-friendly web and mobile applications. Skilled in frontend and backend development, mobile app frameworks, and version control. Knowledgeable in Agile methodologies and experienced in delivering end-to-end software solutions.
               </p>
               <p className="leading-relaxed text-secondary-600">
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                projects, or sharing knowledge with the developer community. I believe in continuous learning 
-                and staying updated with the latest industry trends.
-              </p>
+               Adept at collaborating in team environments and committed to continuous learning and professional growth. Eager to contribute technical skills and creativity to a dynamic development team.
+              </p>    
+             
             </div>
 
             {/* Key Highlights */}
@@ -100,9 +92,9 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.6 }}
-                className="p-4 text-center rounded-lg bg-primary-50"
+                className="p-4 text-center rounded-lg bg-blue-50"
               >
-                <div className="mb-2 text-3xl font-bold text-primary-600"></div>
+                <div className="mb-2 text-3xl font-bold text-blue-600"></div>
                 <div className="text-sm text-secondary-600"></div>
               </motion.div>
               
@@ -120,9 +112,9 @@ const About = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={inView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.4, delay: 0.8 }}
-                className="p-4 text-center rounded-lg bg-primary-50"
+                className="p-4 text-center rounded-lg bg-blue-50"
               >
-                <div className="mb-2 text-3xl font-bold text-primary-600"></div>
+                <div className="mb-2 text-3xl font-bold text-blue-600"></div>
                 <div className="text-sm text-secondary-600"></div>
               </motion.div>
               

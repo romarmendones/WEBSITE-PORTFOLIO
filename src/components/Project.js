@@ -85,8 +85,8 @@ const Projects = () => {
               onClick={() => setActiveFilter(filter.id)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                 activeFilter === filter.id
-                  ? 'bg-primary-600 text-white shadow-lg'
-                  : 'bg-secondary-100 text-secondary-700 hover:bg-primary-100 hover:text-primary-700'
+                  ? 'bg-blue-600 text-white shadow-lg'
+                  : 'bg-secondary-100 text-secondary-700 hover:bg-blue-100 hover:text-blue-700'
               }`}
             >
               {filter.label}
@@ -119,9 +119,9 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 bg-white rounded-full text-secondary-900 hover:text-primary-600"
+                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 bg-white rounded-full text-secondary-900 hover:text-blue-600"
                     >
-                      <FiGithub className="w-6 h-6" />
+                      <FiGithub className="w-6 h-6 text-blue-600" />
                     </motion.a>
                     <motion.a
                       whileHover={{ scale: 1.1 }}
@@ -129,9 +129,9 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 bg-white rounded-full text-secondary-900 hover:text-primary-600"
+                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 bg-white rounded-full text-secondary-900 hover:text-blue-600"
                     >
-                      <FiExternalLink className="w-6 h-6" />
+                      <FiExternalLink className="w-6 h-6 text-blue-600" />
                     </motion.a>
                   </div>
                 </div>
@@ -146,9 +146,9 @@ const Projects = () => {
               <div className="p-6">
                 <div className="flex items-center mb-3 space-x-2">
                   {project.category === 'mobile' ? (
-                    <FiSmartphone className="w-4 h-4 text-primary-600" />
+                    <FiSmartphone className="w-4 h-4 text-blue-600" />
                   ) : (
-                    <FiGlobe className="w-4 h-4 text-primary-600" />
+                    <FiGlobe className="w-4 h-4 text-blue-600" />
                   )}
                   <span className="text-sm capitalize text-secondary-500">{project.category}</span>
                 </div>
@@ -178,7 +178,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2 text-sm font-medium text-center transition-colors duration-200 rounded-lg bg-secondary-100 hover:bg-primary-100 text-secondary-700 hover:text-primary-700"
+                    className="flex-1 py-2 text-sm font-medium text-center transition-colors duration-200 rounded-lg bg-secondary-100 hover:bg-blue-100 text-secondary-700 hover:text-blue-700"
                   >
                     View Code
                   </motion.a>

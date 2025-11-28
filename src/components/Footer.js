@@ -88,9 +88,9 @@ const Footer = () => {
                   transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                   whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-10 h-10 bg-secondary-800 rounded-full flex items-center justify-center text-secondary-300 transition-all duration-200 ${social.color}`}
+                  className={`w-10 h-10 bg-secondary-800 rounded-full flex items-center justify-center text-blue-400 transition-all duration-200 ${social.color}`}
                 >
-                  <social.icon className="w-5 h-5" />
+                  <social.icon className="w-5 h-5 text-blue-400" />
                 </motion.a>
               ))}
             </motion.div>
@@ -113,7 +113,7 @@ const Footer = () => {
                 >
                   <a
                     href={link.href}
-                    className="transition-colors duration-200 text-secondary-300 hover:text-primary-400"
+                    className="transition-colors duration-200 text-secondary-300 hover:text-blue-400"
                   >
                     {link.name}
                   </a>

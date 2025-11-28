@@ -130,7 +130,7 @@ const Experience = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-1 text-sm text-primary-600 font-medium mt-2 md:mt-0">
+                  <div className="flex items-center space-x-1 text-sm text-blue-600 font-medium mt-2 md:mt-0">
                     <FiCalendar className="w-4 h-4" />
                     <span>{experience.period}</span>
                   </div>
@@ -144,13 +144,13 @@ const Experience = () => {
                 {/* Achievements */}
                 <div className="mb-4">
                   <h4 className="text-sm font-semibold text-secondary-900 mb-2 flex items-center space-x-2">
-                    <FiAward className="w-4 h-4 text-primary-600" />
+                    <FiAward className="w-4 h-4 text-blue-600" />
                     <span>Key Achievements</span>
                   </h4>
                   <ul className="space-y-1">
                     {experience.achievements.map((achievement, achievementIndex) => (
                       <li key={achievementIndex} className="text-sm text-secondary-600 flex items-start space-x-2">
-                        <span className="text-primary-600 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
