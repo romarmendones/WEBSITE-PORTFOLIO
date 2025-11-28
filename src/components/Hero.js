@@ -70,8 +70,8 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
                              onClick={() => {
                  const link = document.createElement('a');
-                 link.href = '/Rodanto_Mendones_OnePage.pdf';
-                 link.download = 'Rodanto_Mendones_OnePage.pdf';
+                 link.href = '/Rodanto_Mendones_Resume_OnePage.pdf';
+                 link.download = 'Rodanto_Mendones_Resume_OnePage.pdf';
                  document.body.appendChild(link);
                  link.click();
                  document.body.removeChild(link);
