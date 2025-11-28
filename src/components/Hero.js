@@ -70,8 +70,8 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
                              onClick={() => {
                  const link = document.createElement('a');
-                 link.href = '/Rodanto_Mendones_Professional_Resume.pdf';
-                 link.download = 'Rodanto_Mendones_Professional_Resume.pdf';
+                 link.href = '/Rodanto_Mendones_OnePage.pdf';
+                 link.download = 'Rodanto_Mendones_OnePage.pdf';
                  document.body.appendChild(link);
                  link.click();
                  document.body.removeChild(link);
@@ -106,7 +106,7 @@ const Hero = () => {
               href="https://github.com/romarmendones"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-600 hover:text-blue-700"
+              className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
             >
               <FiGithub className="w-6 h-6" />
             </motion.a>
@@ -117,7 +117,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/romarmendones/ "
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-600 hover:text-blue-700"
+              className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
             >
               <FiLinkedin className="w-6 h-6" />
             </motion.a>
@@ -128,7 +128,7 @@ const Hero = () => {
               href="https://mail.google.com/mail/u/0/#inbox"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 transition-all duration-200 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-600 hover:text-blue-700"
+              className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
             >
               <SiGmail className="w-6 h-6" />
             </motion.a>
@@ -147,7 +147,7 @@ const Hero = () => {
           onClick={scrollToAbout}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="transition-colors duration-200 text-blue-400 hover:text-blue-600"
+          className="text-blue-400 transition-colors duration-200 hover:text-blue-600"
         >
           <FiArrowDown className="w-6 h-6" />
         </motion.button>
