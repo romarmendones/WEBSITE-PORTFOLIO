@@ -80,12 +80,12 @@ const Experience = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
-          <h2 className="text-4xl font-bold text-secondary-900 mb-4">
+          <h2 className="mb-4 text-4xl font-bold text-secondary-900">
             Work <span className="gradient-text">Experience</span>
           </h2>
-          <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+          <p className="max-w-2xl mx-auto text-lg text-secondary-600">
             My professional journey and the impact I've made in the tech industry
           </p>
         </motion.div>
@@ -114,9 +114,9 @@ const Experience = () => {
                 index % 2 === 0 ? 'md:mr-8' : 'md:ml-8'
               }`}>
                 {/* Header */}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <div className="flex flex-col mb-4 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-secondary-900 mb-1">
+                    <h3 className="mb-1 text-xl font-bold text-secondary-900">
                       {experience.title}
                     </h3>
                     <div className="flex items-center space-x-4 text-sm text-secondary-600">
@@ -130,27 +130,27 @@ const Experience = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex items-center space-x-1 text-sm text-blue-600 font-medium mt-2 md:mt-0">
+                  <div className="flex items-center mt-2 space-x-1 text-sm font-medium text-blue-600 md:mt-0">
                     <FiCalendar className="w-4 h-4" />
                     <span>{experience.period}</span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-secondary-600 leading-relaxed mb-4">
+                <p className="mb-4 leading-relaxed text-secondary-600">
                   {experience.description}
                 </p>
 
                 {/* Achievements */}
                 <div className="mb-4">
-                  <h4 className="text-sm font-semibold text-secondary-900 mb-2 flex items-center space-x-2">
+                  <h4 className="flex items-center mb-2 space-x-2 text-sm font-semibold text-secondary-900">
                     <FiAward className="w-4 h-4 text-blue-600" />
                     <span>Key Achievements</span>
                   </h4>
                   <ul className="space-y-1">
                     {experience.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="text-sm text-secondary-600 flex items-start space-x-2">
-                        <span className="text-blue-600 mt-1">•</span>
+                      <li key={achievementIndex} className="flex items-start space-x-2 text-sm text-secondary-600">
+                        <span className="mt-1 text-blue-600">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
@@ -159,12 +159,12 @@ const Experience = () => {
 
                 {/* Technologies */}
                 <div>
-                  <h4 className="text-sm font-semibold text-secondary-900 mb-2">Technologies Used</h4>
+                  <h4 className="mb-2 text-sm font-semibold text-secondary-900">Technologies Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {experience.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-primary-100 text-primary-700 text-xs rounded-full font-medium"
+                        className="px-3 py-1 text-xs font-medium rounded-full bg-primary-100 text-primary-700"
                       >
                         {tech}
                       </span>
@@ -181,24 +181,24 @@ const Experience = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 bg-white rounded-xl p-8 shadow-lg"
+          className="p-8 mt-16 bg-white shadow-lg rounded-xl"
         >
-          <h3 className="text-2xl font-bold text-secondary-900 mb-6 text-center">
+          <h3 className="mb-6 text-2xl font-bold text-center text-secondary-900">
             Education & Certifications
           </h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h4 className="text-lg font-bold text-secondary-900 mb-2">Bachelor of Information Technology</h4>
-              <p className="text-secondary-600 mb-1">Manuel S. Enverga University Foundation</p>
+              <h4 className="mb-2 text-lg font-bold text-secondary-900">Bachelor of Information Technology</h4>
+              <p className="mb-1 text-secondary-900">Manuel S. Enverga University Foundation</p>
               <p className="text-sm text-secondary-500">2019 - 2025</p>
             </div>
             <div>
-              <h4 className="text-lg font-bold text-secondary-900 mb-2">Certifications</h4>
+              <h4 className="mb-2 text-lg font-bold text-secondary-900">Certifications</h4>
               <ul className="space-y-1 text-sm text-secondary-600">
-                <li>• </li>
-                <li>•</li>
-                <li>• </li>
-                <li>• </li>
+                <li> </li>
+                <li></li>
+                <li> </li>
+                <li> </li>
               </ul>
             </div>
           </div>

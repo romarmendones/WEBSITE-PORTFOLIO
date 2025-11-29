@@ -12,7 +12,7 @@ const About = () => {
   const personalInfo = [
     { icon: FiUser, label: 'Name', value: 'Rodanto Mari N. Mendones' },
     { icon: FiCalendar, label: 'Age', value: '25 years old' },
-    { icon: FiMapPin, label: 'Location', value: 'Mauban, Quezon' },
+    { icon: FiMapPin, label: 'Location', value: 'Mauban, Quezon Province' },
     { icon: FiMail, label: 'Email', value: 'romarmendones24@gmail.com' },
     { icon: FiPhone, label: 'Phone', value: '09618105592' },
   ];

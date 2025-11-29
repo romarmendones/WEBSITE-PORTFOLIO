@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiArrowDown, FiGithub, FiLinkedin, FiDownload } from 'react-icons/fi';
+import { FiArrowDown, FiGithub, FiLinkedin, FiDownload, FiFacebook, FiInstagram } from 'react-icons/fi';
 import { SiGmail } from 'react-icons/si';
 
 const Hero = () => {
@@ -104,7 +104,7 @@ const Hero = () => {
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               href="https://github.com/romarmendones"
-              target="_blank"
+              target="https://github.com/romarmendones"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
             >
@@ -130,9 +130,33 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
             >
-              <SiGmail className="w-6 h-6" />
+              <SiGmail className="w-6 h-6" />,
+              
+            </motion.a>
+            
+            <motion.a
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://www.facebook.com/romarmendones"
+              target="https://www.facebook.com/romar.mendones"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
+            >
+              <FiFacebook className="w-6 h-6" />
+
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.1, y: -2 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://www.instagram.com/romarmendones/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
+            >
+              <FiInstagram className="w-6 h-6" />
             </motion.a>
           </motion.div>
+          
         </div>
       </div>
 
