@@ -149,7 +149,7 @@ const Hero = () => {
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
               href="https://www.instagram.com/romarmendones/"
-              target="_blank"
+              target="https://www.instagram.com/roooo_mmmaarrr/"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 text-blue-600 transition-all duration-200 bg-blue-100 rounded-full hover:bg-blue-200 hover:text-blue-700"
             >
