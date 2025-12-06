@@ -1,12 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiArrowUp } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter,  } from 'react-icons/fi';
 import { SiGmail } from 'react-icons/si';
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+  
 
   const currentYear = new Date().getFullYear();
 
@@ -52,25 +50,7 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-4">
           {/* Brand Section */}
           <div className="md:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="mb-6"
-            >
-              <div className="flex items-center mb-4 space-x-2">
-                <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-r from-primary-600 to-primary-400">
-                  <span className="text-lg font-bold text-white">P</span>
-                </div>
-                <span className="text-xl font-bold">Portfolio</span>
-              </div>
-              <p className="max-w-md leading-relaxed text-secondary-300">
-                A passionate Full Stack Developer creating innovative digital solutions 
-                and building the future of web technology.
-              </p>
-            </motion.div>
-
-            {/* Social Links */}
+           {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -146,18 +126,6 @@ const Footer = () => {
         >
           <div className="mb-4 text-sm text-secondary-400 md:mb-0">
             © {currentYear} Rodanto Mari N.Mendones. All rights reserved.
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <span className="text-sm text-secondary-400">Made with ❤️ using React & Tailwind</span>
-            <motion.button
-              onClick={scrollToTop}
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              className="flex items-center justify-center w-10 h-10 transition-colors duration-200 rounded-full bg-primary-600 hover:bg-primary-700"
-            >
-              <FiArrowUp className="w-5 h-5" />
-            </motion.button>
           </div>
         </motion.div>
       </div>

@@ -74,12 +74,7 @@ const About = () => {
             className="space-y-6"
           >
             <div>
-              <h3 className="mb-4 text-2xl font-bold text-secondary-900">
-                MY STORY
-              </h3>
-              <p className="mb-4 leading-relaxed text-secondary-600">
-               Motivated Junior Web Developer with hands-on experience in building responsive and user-friendly web and mobile applications. Skilled in frontend and backend development, mobile app frameworks, and version control. Knowledgeable in Agile methodologies and experienced in delivering end-to-end software solutions.
-              </p>
+      
               <p className="leading-relaxed text-secondary-600">
                Adept at collaborating in team environments and committed to continuous learning and professional growth. Eager to contribute technical skills and creativity to a dynamic development team.
               </p>    

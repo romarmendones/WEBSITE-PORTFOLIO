@@ -43,28 +43,25 @@ const Navbar = () => {
           : 'bg-transparent'
       }`}
     >
-      <div className="container-custom px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="px-4 container-custom sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-primary-400 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
-            <span className="text-xl font-bold gradient-text">Portfolio</span>
-          </motion.div>
+            
+      </motion.div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden space-x-8 md:flex">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="text-secondary-700 hover:text-blue-600 font-medium transition-colors duration-200 flex items-center space-x-1"
+                className="flex items-center space-x-1 font-medium transition-colors duration-200 text-secondary-700 hover:text-blue-600"
               >
                 <item.icon className="w-4 h-4 text-blue-500" />
                 <span>{item.name}</span>
@@ -77,7 +74,7 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="text-secondary-700 hover:text-blue-600 p-2"
+              className="p-2 text-secondary-700 hover:text-blue-600"
             >
               {isOpen ? <FiX className="w-6 h-6 text-blue-500" /> : <FiMenu className="w-6 h-6 text-blue-500" />}
             </motion.button>
@@ -92,15 +89,15 @@ const Navbar = () => {
             height: isOpen ? 'auto' : 0,
           }}
           transition={{ duration: 0.3 }}
-          className="md:hidden overflow-hidden"
+          className="overflow-hidden md:hidden"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 shadow-lg">
+          <div className="px-2 pt-2 pb-3 mt-2 space-y-1 rounded-lg shadow-lg bg-white/95 backdrop-blur-md">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 whileHover={{ x: 5 }}
                 onClick={() => scrollToSection(item.href)}
-                className="w-full text-left px-3 py-2 text-secondary-700 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors duration-200 flex items-center space-x-2"
+                className="flex items-center w-full px-3 py-2 space-x-2 text-left transition-colors duration-200 rounded-md text-secondary-700 hover:text-blue-600 hover:bg-blue-50"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>

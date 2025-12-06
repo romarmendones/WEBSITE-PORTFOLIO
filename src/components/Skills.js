@@ -43,7 +43,6 @@ const Skills = () => {
         { name: 'Node.js', level: 88 },
         { name: 'Express.js', level: 85 },
         { name: 'Python', level: 80 },
-        
         { name: 'Supabase', level: 70 },
       ]
     },
@@ -134,7 +133,7 @@ const Skills = () => {
       {/* Animated background accents */}
       <motion.span
         aria-hidden
-        className="absolute rounded-full pointer-events-none -top-24 -left-24 h-80 w-80 bg-primary-300/30 blur-3xl"
+        className="absolute rounded-full pointer-events-none -top-24 -left-24 h-80 w-80 bg-primary-300/20 blur-3xl"
         initial={{ scale: 0.9, rotate: 0, opacity: 0.5 }}
         animate={{ scale: [0.9, 1.05, 0.9], rotate: [0, 30, 0], opacity: [0.45, 0.6, 0.45] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
@@ -178,9 +177,9 @@ const Skills = () => {
                 type="button"
                 aria-label="Next"
                 onClick={() => goToPage(currentPage + 1)}
-                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/90 md:flex hover:bg-white border-white/50"
+                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/90 md:flex hover:bg-gray-100 border-black/50"
               >
-              <FiChevronRight className="w-4 h-4 text-secondary-900" />
+              <FiChevronRight className="w-4 h-4 text-secondary-gray" />
               </button>
 
               <div
@@ -192,7 +191,7 @@ const Skills = () => {
                   const Icon = skillIconMap[skill.name];
                   return (
                     <div key={skill.name} className="snap-start shrink-0 w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] flex flex-col items-center justify-center gap-3">
-                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary-100 text-secondary-800">
+                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-secondartext-secondary-800">
                         {Icon ? <Icon className="w-10 h-10" /> : <span className="text-lg">{skill.name[0]}</span>}
                       </div>
                       <div className="text-sm font-medium text-secondary-800">{skill.name}</div>
