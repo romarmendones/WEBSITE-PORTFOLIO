@@ -28,11 +28,11 @@ const Skills = () => {
       title: 'Frontend Development',
       icon: FiCode,
       skills: [
-        { name: 'React.js', level: 95 },
-        { name: 'JavaScript', level: 90 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'HTML/CSS', level: 95 },
-        { name: 'Tailwind CSS', level: 90 },
+        { name: 'React.js',  },
+        { name: 'JavaScript',  },
+        { name: 'TypeScript'},
+        { name: 'HTML/CSS',  },
+        { name: 'Tailwind CSS',  },
         
       ]
     },
@@ -40,17 +40,17 @@ const Skills = () => {
       title: 'Backend Development',
       icon: FiDatabase,
       skills: [
-        { name: 'Node.js', level: 88 },
-        { name: 'Express.js', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'Supabase', level: 70 },
+        { name: 'Node.js',  },
+        { name: 'Express.js', },
+        { name: 'Python',  },
+        { name: 'Supabase',  },
       ]
     },
     {
       title: 'Cloud & DevOps',
       icon: FiCloud,
       skills: [
-      { name: 'Git', level: 90 },
+      { name: 'Git', },
        
       ]
     },
@@ -58,7 +58,7 @@ const Skills = () => {
       title: 'Mobile Development',
       icon: FiSmartphone,
       skills: [
-        { name: 'React Native', level: 75 },
+        { name: 'React Native',  },
        
        
         
