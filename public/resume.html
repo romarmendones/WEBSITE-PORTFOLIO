@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .resume {
+            background: white;
+            padding: 40px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 20px;
+        }
+        
+        .name {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            line-height: 1.8;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        
+        .summary {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .skill-category {
+            flex: 1;
+            min-width: 200px;
+        }
+        
+        .skill-category h4 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .skill-list {
+            list-style: none;
+            color: #555;
+        }
+        
+        .skill-list li {
+            margin-bottom: 3px;
+        }
+        
+        .experience-item, .project-item {
+            margin-bottom: 20px;
+        }
+        
+        .job-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+        
+        .company {
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .dates {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+        
+        .achievements {
+            list-style: none;
+            margin-top: 10px;
+        }
+        
+        .achievements li {
+            margin-bottom: 5px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .achievements li:before {
+            content: "•";
+            color: #3498db;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .university {
+            color: #3498db;
+        }
+        
+        .certifications {
+            list-style: none;
+        }
+        
+        .certifications li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .certifications li:before {
+            content: "✓";
+            color: #27ae60;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .resume {
+                box-shadow: none;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- Header -->
+        <div class="header">
+            <div class="name">RODANTO MARI N. MENDONES</div>
+            <div class="contact-info">
+                Email: romarmendones24@gmail.com | Phone: 09618105592<br>
+                Location: Mauban, Quezon | Age: 24 years old<br>
+                Portfolio: yourwebsite.com
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">PROFESSIONAL SUMMARY</div>
+            <div class="summary">
+                Passionate Full Stack Developer with over 5 years of experience in creating innovative digital solutions. 
+                Specialized in modern web technologies including React, Node.js, and cloud platforms. 
+                Demonstrated success in building scalable applications and delivering exceptional user experiences. 
+                Committed to continuous learning and staying updated with the latest industry trends.
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="section">
+            <div class="section-title">SKILLS</div>
+            <div class="skills">
+                <div class="skill-category">
+                    <h4>Frontend Development</h4>
+                    <ul class="skill-list">
+                        <li>React.js, JavaScript, TypeScript</li>
+                        <li>HTML5, CSS3, Tailwind CSS</li>
+                        <li>Next.js, React Native</li>
+                        <li>Mobile UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Backend Development</h4>
+                    <ul class="skill-list">
+                        <li>Node.js, Express.js, Python</li>
+                        <li>Django, Laravel, Supabase</li>
+                        <li>Database Design & Management</li>
+                        <li>API Development & Integration</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Technologies</h4>
+                    <ul class="skill-list">
+                        <li>Git, GitHub, Version Control</li>
+                        <li>Figma, App Store Deployment</li>
+                        <li>Cloud Platforms & DevOps</li>
+                        <li>Agile Development & Scrum</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <div class="section-title">EXPERIENCE</div>
+            
+            <div class="experience-item">
+                <div class="job-title">Senior Full Stack Developer</div>
+                <div class="company">Freelance & Contract Work</div>
+                <div class="dates">2022 - Present</div>
+                <ul class="achievements">
+                    <li>Developed full-stack web applications using React, Node.js, and modern cloud platforms</li>
+                    <li>Built responsive and scalable solutions for various clients across different industries</li>
+                    <li>Implemented best practices in code architecture and user experience design</li>
+                    <li>Collaborated with clients to understand requirements and deliver high-quality solutions</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-title">Full Stack Developer</div>
+                <div class="company">Personal Projects & Freelance</div>
+                <div class="dates">2020 - 2022</div>
+                <ul class="achievements">
+                    <li>Created multiple web applications using React, TypeScript, and Node.js</li>
+                    <li>Developed mobile applications using React Native and Flutter</li>
+                    <li>Implemented responsive designs and optimized performance for better user experience</li>
+                    <li>Contributed to open-source projects and maintained active GitHub presence</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Education -->
+        <div class="section">
+            <div class="section-title">EDUCATION</div>
+            <div class="education-item">
+                <div class="degree">Self-Taught Full Stack Development</div>
+                <div class="university">Online Learning & Practical Experience</div>
+                <div class="dates">2019 - Present</div>
+                <div>Relevant Coursework: Web Development, Mobile App Development, Database Design, Cloud Computing</div>
+            </div>
+            <div class="education-item">
+                <div class="degree">High School Diploma</div>
+                <div class="university">Local High School</div>
+                <div class="dates">Graduated: 2018</div>
+                <div>Started learning programming at age 16, building first website</div>
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <div class="section">
+            <div class="section-title">PROJECTS</div>
+            
+            <div class="project-item">
+                <div class="job-title">Portfolio Website</div>
+                <div>Modern, responsive portfolio website built with React and Tailwind CSS</div>
+                <ul class="achievements">
+                    <li>Technologies: React, Tailwind CSS, Framer Motion, React Icons</li>
+                    <li>Features: Responsive design, smooth animations, contact form, project showcase</li>
+                    <li>GitHub: github.com/yourusername/portfolio-website</li>
+                    <li>Live Demo: yourwebsite.com</li>
+                </ul>
+            </div>
+
+            <div class="project-item">
+                <div class="job-title">Mobile Application</div>
+                <div>Cross-platform mobile app developed with React Native</div>
+                <ul class="achievements">
+                    <li>Technologies: React Native, JavaScript, Mobile UI/UX</li>
+                    <li>Features: Responsive design, native performance, app store deployment</li>
+                    <li>GitHub: github.com/yourusername/mobile-app</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="section">
+            <div class="section-title">CERTIFICATIONS</div>
+            <ul class="certifications">
+                <li>AWS Certified Developer Associate - Amazon Web Services - 2023</li>
+                <li>MongoDB Database Administrator - MongoDB University - 2022</li>
+                <li>React Developer Certification - Meta - 2021</li>
+            </ul>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="section">
+            <div class="section-title">ADDITIONAL INFORMATION</div>
+            <ul class="achievements">
+                <li>Languages: English (Professional), Filipino (Native)</li>
+                <li>Interests: Web Development, Mobile App Development, UI/UX Design, Open Source Projects</li>
+                <li>Learning Focus: Continuous improvement in React ecosystem, cloud platforms, and emerging technologies</li>
+                <li>Community: Active participation in developer communities and knowledge sharing</li>
+            </ul>
+        </div>
+
+        <div style="text-align: center; margin-top: 30px; color: #7f8c8d; font-style: italic;">
+            References available upon request
+        </div>
+    </div>
+</body>
+</html>
