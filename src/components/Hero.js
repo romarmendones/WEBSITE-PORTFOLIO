@@ -137,7 +137,7 @@ const Hero = () => {
             <motion.a
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              href="https://www.facebook.com/romarmendones"
+              href="https://www.facebook.com/romar.mendones"
               target="https://www.facebook.com/romar.mendones"
               rel="noopener noreferrer"
               className="flex items-center justify-center w-12 h-12 transition-all duration-200 border rounded-full text-slate-100 bg-white/5 hover:bg-white/10 border-white/10"
