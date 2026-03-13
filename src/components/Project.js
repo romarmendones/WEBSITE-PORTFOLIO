@@ -33,7 +33,21 @@ const Projects = () => {
       github: 'https://github.com',
       live: 'https://coffee-shop16.vercel.app/',
       featured: true
-    },
+},
+{
+  id: 3,
+  title:'Brew & Bean',
+    description: ' Coffee Shop',
+  image:require('../image/Coffee1.jpg'),
+  category: 'web',
+  technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+  github: 'https://github.com',
+  live: 'https://coffee-brew-bean-shop.vercel.app//',
+  featured: true
+},
+
+    
+    
     
     
     
