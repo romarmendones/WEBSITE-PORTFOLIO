@@ -40,7 +40,7 @@ const Projects = () => {
     description: ' Coffee Shop',
   image:require('../image/Coffee1.jpg'),
   category: 'web',
-  technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+  technologies: ['Vue.js', 'Tailwind CSS',''],
   github: 'https://github.com',
   live: 'https://coffee-brew-bean-shop.vercel.app//',
   featured: true
