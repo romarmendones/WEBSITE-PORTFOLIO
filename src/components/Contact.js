@@ -86,7 +86,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -95,10 +95,10 @@ const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-secondary-900 mb-4">
+          <h2 className="text-4xl font-bold text-slate-100 mb-4">
             Get In <span className="gradient-text">Touch</span>
           </h2>
-          <p className="text-lg text-secondary-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology
           </p>
         </motion.div>
@@ -112,10 +112,10 @@ const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold text-secondary-900 mb-6">
+              <h3 className="text-2xl font-bold text-slate-100 mb-6">
                 Let's Connect
               </h3>
-              <p className="text-secondary-600 leading-relaxed mb-8">
+              <p className="text-slate-300 leading-relaxed mb-8">
                 I'm currently available for freelance work and full-time opportunities. 
                 Whether you have a question or just want to say hi, I'll try my best to get back to you!
               </p>
@@ -130,14 +130,14 @@ const Contact = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={inView ? { opacity: 1, x: 0 } : {}}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center space-x-4 p-4 bg-secondary-50 rounded-lg hover:bg-primary-50 transition-colors duration-200 group"
+                  className="flex items-center space-x-4 p-4 border rounded-lg bg-white/5 border-white/10 hover:bg-white/10 transition-colors duration-200 group"
                 >
-                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-200 transition-colors duration-200">
-                    <info.icon className="w-6 h-6 text-blue-600" />
+                  <div className="w-12 h-12 border rounded-lg flex items-center justify-center bg-white/5 border-white/10 group-hover:bg-white/10 transition-colors duration-200">
+                    <info.icon className="w-6 h-6 text-sky-300" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-secondary-900">{info.title}</h4>
-                    <p className="text-secondary-600">{info.value}</p>
+                    <h4 className="font-semibold text-slate-100">{info.title}</h4>
+                    <p className="text-slate-300">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -145,7 +145,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <div>
-              <h4 className="text-lg font-semibold text-secondary-900 mb-4">
+              <h4 className="text-lg font-semibold text-slate-100 mb-4">
                 Follow Me
               </h4>
               <div className="flex space-x-4">
@@ -160,9 +160,9 @@ const Contact = () => {
                     transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.95 }}
-                    className={`w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 transition-all duration-200 ${social.color}`}
+                    className="w-12 h-12 border rounded-full flex items-center justify-center transition-all duration-200 bg-white/5 hover:bg-white/10 border-white/10 text-slate-100 hover:text-sky-200"
                   >
-                    <social.icon className="w-6 h-6 text-blue-600" />
+                    <social.icon className="w-6 h-6 text-sky-300" />
                   </motion.a>
                 ))}
               </div>
@@ -176,16 +176,16 @@ const Contact = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-gradient-to-br from-blue-50 to-secondary-50 rounded-xl p-8"
+            className="border bg-white/5 border-white/10 rounded-xl p-8"
           >
-            <h3 className="text-2xl font-bold text-secondary-900 mb-6">
+            <h3 className="text-2xl font-bold text-slate-100 mb-6">
               Send Message
             </h3>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-200 mb-2">
                     Name
                   </label>
                   <input
@@ -195,13 +195,13 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border rounded-lg bg-slate-950/40 border-white/10 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-200"
                     placeholder="Your name"
                   />
                 </div>
                 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-secondary-700 mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
                     Email
                   </label>
                   <input
@@ -211,14 +211,14 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200"
+                    className="w-full px-4 py-3 border rounded-lg bg-slate-950/40 border-white/10 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-200"
                     placeholder="your@email.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-200 mb-2">
                   Subject
                 </label>
                 <input
@@ -228,13 +228,13 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                  className="w-full px-4 py-3 border rounded-lg bg-slate-950/40 border-white/10 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-200"
                   placeholder="What's this about?"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-secondary-700 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-2">
                   Message
                 </label>
                 <textarea
@@ -244,7 +244,7 @@ const Contact = () => {
                   onChange={handleInputChange}
                   required
                   rows="6"
-                  className="w-full px-4 py-3 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
+                  className="w-full px-4 py-3 border rounded-lg bg-slate-950/40 border-white/10 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-sky-400 focus:border-transparent transition-all duration-200 resize-none"
                   placeholder="Tell me about your project or just say hello..."
                 />
               </div>
@@ -272,18 +272,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Availability Status */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <div className="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-6 py-3 rounded-full">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="font-medium">Available for new opportunities</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

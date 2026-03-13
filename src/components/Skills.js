@@ -129,18 +129,21 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="relative overflow-hidden section-padding bg-gradient-to-br from-secondary-50 to-primary-50">
+    <section
+      id="skills"
+      className="relative overflow-hidden section-padding bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900"
+    >
       {/* Animated background accents */}
       <motion.span
         aria-hidden
-        className="absolute rounded-full pointer-events-none -top-24 -left-24 h-80 w-80 bg-primary-300/20 blur-3xl"
+        className="absolute rounded-full pointer-events-none -top-24 -left-24 h-80 w-80 bg-indigo-500/10 blur-3xl"
         initial={{ scale: 0.9, rotate: 0, opacity: 0.5 }}
         animate={{ scale: [0.9, 1.05, 0.9], rotate: [0, 30, 0], opacity: [0.45, 0.6, 0.45] }}
         transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
       />
       <motion.span
         aria-hidden
-        className="absolute rounded-full pointer-events-none -bottom-24 -right-24 h-96 w-96 bg-secondary-300/30 blur-3xl"
+        className="absolute rounded-full pointer-events-none -bottom-24 -right-24 h-96 w-96 bg-fuchsia-500/10 blur-3xl"
         initial={{ scale: 1.1, rotate: 0, opacity: 0.5 }}
         animate={{ scale: [1.1, 0.95, 1.1], rotate: [0, -25, 0], opacity: [0.45, 0.6, 0.45] }}
         transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
@@ -154,32 +157,32 @@ const Skills = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold text-secondary-900">
+          <h2 className="mb-4 text-4xl font-bold text-slate-100">
             MY <span className="gradient-text">SKILLS</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-secondary-600">
+          <p className="max-w-2xl mx-auto text-lg text-slate-300">
            
           </p>
         </motion.div>
 
         <div className="relative">
-          <div className="p-4 mx-auto border rounded-full shadow-inner bg-white/70 backdrop-blur border-white/40">
+          <div className="p-4 mx-auto border rounded-full shadow-inner bg-white/5 backdrop-blur border-white/10">
             <div className="relative">
               <button
                 type="button"
                 aria-label="Previous"
                 onClick={() => goToPage(currentPage - 1)}
-                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -left-3 top-1/2 bg-white/90 md:flex hover:bg-white border-white/50"
+                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -left-3 top-1/2 bg-white/10 md:flex hover:bg-white/15 border-white/10"
               >
-                <FiChevronLeft className="w-4 h-4 text-secondary-900" />
+                <FiChevronLeft className="w-4 h-4 text-slate-100" />
               </button>
               <button
                 type="button"
                 aria-label="Next"
                 onClick={() => goToPage(currentPage + 1)}
-                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/90 md:flex hover:bg-gray-100 border-black/50"
+                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/10 md:flex hover:bg-white/15 border-white/10"
               >
-              <FiChevronRight className="w-4 h-4 text-secondary-gray" />
+                <FiChevronRight className="w-4 h-4 text-slate-100" />
               </button>
 
               <div
@@ -191,10 +194,14 @@ const Skills = () => {
                   const Icon = skillIconMap[skill.name];
                   return (
                     <div key={skill.name} className="snap-start shrink-0 w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] flex flex-col items-center justify-center gap-3">
-                      <div className="flex items-center justify-center w-20 h-20 rounded-2xl bg-secondartext-secondary-800">
-                        {Icon ? <Icon className="w-10 h-10" /> : <span className="text-lg">{skill.name[0]}</span>}
+                      <div className="flex items-center justify-center w-20 h-20 border rounded-2xl bg-white/5 border-white/10">
+                        {Icon ? (
+                          <Icon className="w-10 h-10 text-slate-100" />
+                        ) : (
+                          <span className="text-lg text-slate-100">{skill.name[0]}</span>
+                        )}
                       </div>
-                      <div className="text-sm font-medium text-secondary-800">{skill.name}</div>
+                      <div className="text-sm font-medium text-slate-200">{skill.name}</div>
                     </div>
                   );
                 })}
@@ -207,7 +214,7 @@ const Skills = () => {
                   key={i}
                   aria-label={`Go to slide ${i + 1}`}
                   onClick={() => goToPage(i)}
-                  className={`h-1.5 w-1.5 rounded-full transition-all ${i === currentPage ? 'w-3 bg-secondary-900' : 'bg-secondary-400/60'}`}
+                  className={`h-1.5 w-1.5 rounded-full transition-all ${i === currentPage ? 'w-3 bg-slate-100' : 'bg-white/30'}`}
                 />)
               )}
             </div>

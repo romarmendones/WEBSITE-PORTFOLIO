@@ -6,7 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Project from './components/Project';
 import Contact from './components/Contact';
-import Footer from './components/Footer';
+
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -46,7 +46,7 @@ function App() {
         <Project />
       <Contact />
       </main>
-      <Footer />
+    
     </div>
   );
 }

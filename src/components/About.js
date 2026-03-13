@@ -14,7 +14,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="bg-white section-padding">
+    <section id="about" className="section-padding bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -33,7 +33,7 @@ const About = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <h3 className="mb-6 text-2xl font-bold text-secondary-900">
+            <h3 className="mb-6 text-2xl font-bold text-slate-100">
             </h3>
             <div className="space-y-4">
               {personalInfo.map((info, index) => (
@@ -44,40 +44,21 @@ const About = () => {
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
                   className="flex items-center space-x-4"
                 >
-                  <div className="flex items-center justify-center w-10 h-10 bg-blue-100 rounded-lg">
-                    <info.icon className="w-5 h-5 text-blue-600" />
+                  <div className="flex items-center justify-center w-10 h-10 border rounded-lg bg-white/5 border-white/10">
+                    <info.icon className="w-5 h-5 text-sky-300" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-secondary-500">{info.label}</p>
-                    <p className="font-semibold text-secondary-900">{info.value}</p>
+                   
                   </div>
                 </motion.div>
               ))}
             </div>
           </motion.div>
 
-          {/* About Content */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-6"
-          >
+      
            
 
-         {/* Key Highlights */}
-            <div className="grid grid-cols-2 gap-4 mt-8">
-           <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.4, delay: 0.9 }}
-                className="p-4 text-center rounded-lg bg-secondary-50"
-              >
-                <div className="mb-2 text-3xl font-bold text-secondary-600"></div>
-                <div className="text-sm text-secondary-600"></div>
-              </motion.div>
-            </div>
-          </motion.div>
+         
         </div>
       </div>
     </section>

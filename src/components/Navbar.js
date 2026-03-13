@@ -39,7 +39,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-md shadow-lg'
+          ? 'bg-slate-950/80 backdrop-blur-md shadow-lg shadow-black/20 border-b border-white/10'
           : 'bg-transparent'
       }`}
     >
@@ -61,9 +61,9 @@ const Navbar = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.href)}
-                className="flex items-center space-x-1 font-medium transition-colors duration-200 text-secondary-700 hover:text-blue-600"
+                className="flex items-center space-x-1 font-medium transition-colors duration-200 text-slate-200 hover:text-sky-200"
               >
-                <item.icon className="w-4 h-4 text-blue-500" />
+                <item.icon className="w-4 h-4 text-sky-300" />
                 <span>{item.name}</span>
               </motion.button>
             ))}
@@ -74,9 +74,9 @@ const Navbar = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 text-secondary-700 hover:text-blue-600"
+              className="p-2 text-slate-200 hover:text-sky-200"
             >
-              {isOpen ? <FiX className="w-6 h-6 text-blue-500" /> : <FiMenu className="w-6 h-6 text-blue-500" />}
+              {isOpen ? <FiX className="w-6 h-6 text-sky-300" /> : <FiMenu className="w-6 h-6 text-sky-300" />}
             </motion.button>
           </div>
         </div>
@@ -91,13 +91,13 @@ const Navbar = () => {
           transition={{ duration: 0.3 }}
           className="overflow-hidden md:hidden"
         >
-          <div className="px-2 pt-2 pb-3 mt-2 space-y-1 rounded-lg shadow-lg bg-white/95 backdrop-blur-md">
+          <div className="px-2 pt-2 pb-3 mt-2 space-y-1 border rounded-lg shadow-lg bg-slate-950/90 border-white/10 backdrop-blur-md">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 whileHover={{ x: 5 }}
                 onClick={() => scrollToSection(item.href)}
-                className="flex items-center w-full px-3 py-2 space-x-2 text-left transition-colors duration-200 rounded-md text-secondary-700 hover:text-blue-600 hover:bg-blue-50"
+                className="flex items-center w-full px-3 py-2 space-x-2 text-left transition-colors duration-200 rounded-md text-slate-200 hover:text-sky-200 hover:bg-white/5"
               >
                 <item.icon className="w-4 h-4" />
                 <span>{item.name}</span>

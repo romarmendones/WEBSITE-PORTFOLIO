@@ -53,7 +53,7 @@ const Projects = () => {
   });
 
   return (
-    <section id="projects" className="bg-white section-padding">
+    <section id="projects" className="section-padding bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -62,10 +62,10 @@ const Projects = () => {
           transition={{ duration: 0.6 }}
           className="mb-16 text-center"
         >
-          <h2 className="mb-4 text-4xl font-bold text-secondary-900">
+          <h2 className="mb-4 text-4xl font-bold text-slate-100">
             My <span className="gradient-text">Projects</span>
           </h2>
-          <p className="max-w-2xl mx-auto text-lg text-secondary-600">
+          <p className="max-w-2xl mx-auto text-lg text-slate-300">
             Explore my latest work and creative solutions across various technologies
           </p>
         </motion.div>
@@ -85,8 +85,8 @@ const Projects = () => {
               onClick={() => setActiveFilter(filter.id)}
               className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
                 activeFilter === filter.id
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-secondary-100 text-secondary-700 hover:bg-blue-100 hover:text-blue-700'
+                  ? 'bg-sky-500 text-slate-950 shadow-lg shadow-black/30'
+                  : 'bg-white/5 text-slate-200 hover:bg-white/10 border border-white/10'
               }`}
             >
               {filter.label}
@@ -102,7 +102,7 @@ const Projects = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="overflow-hidden transition-all duration-300 bg-white shadow-lg rounded-xl hover:shadow-xl group"
+              className="overflow-hidden transition-all duration-300 border bg-white/5 border-white/10 rounded-xl hover:bg-white/10 hover:shadow-xl hover:shadow-black/30 group"
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
@@ -119,9 +119,9 @@ const Projects = () => {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 bg-white rounded-full text-secondary-900 hover:text-blue-600"
+                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 border rounded-full bg-slate-950/60 border-white/10 text-slate-100 hover:text-sky-200"
                     >
-                      <FiGithub className="w-6 h-6 text-blue-600" />
+                      <FiGithub className="w-6 h-6 text-sky-300" />
                     </motion.a>
                     <motion.a
                       whileHover={{ scale: 1.1 }}
@@ -129,9 +129,9 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 bg-white rounded-full text-secondary-900 hover:text-blue-600"
+                      className="flex items-center justify-center w-12 h-12 transition-colors duration-200 border rounded-full bg-slate-950/60 border-white/10 text-slate-100 hover:text-sky-200"
                     >
-                      <FiExternalLink className="w-6 h-6 text-blue-600" />
+                      <FiExternalLink className="w-6 h-6 text-sky-300" />
                     </motion.a>
                   </div>
                 </div>
@@ -146,15 +146,15 @@ const Projects = () => {
               <div className="p-6">
                 <div className="flex items-center mb-3 space-x-2">
                   {project.category === 'mobile' ? (
-                    <FiSmartphone className="w-4 h-4 text-blue-600" />
+                    <FiSmartphone className="w-4 h-4 text-sky-300" />
                   ) : (
-                    <FiGlobe className="w-4 h-4 text-blue-600" />
+                    <FiGlobe className="w-4 h-4 text-sky-300" />
                   )}
-                  <span className="text-sm capitalize text-secondary-500">{project.category}</span>
+                  <span className="text-sm capitalize text-slate-400">{project.category}</span>
                 </div>
                 
-                <h3 className="mb-3 text-xl font-bold text-secondary-900">{project.title}</h3>
-                <p className="mb-4 text-sm leading-relaxed text-secondary-600">
+                <h3 className="mb-3 text-xl font-bold text-slate-100">{project.title}</h3>
+                <p className="mb-4 text-sm leading-relaxed text-slate-300">
                   {project.description}
                 </p>
 
@@ -163,7 +163,7 @@ const Projects = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 text-xs font-medium rounded-full bg-secondary-100 text-secondary-700"
+                      className="px-3 py-1 text-xs font-medium border rounded-full bg-white/5 border-white/10 text-slate-200"
                     >
                       {tech}
                     </span>
@@ -178,7 +178,7 @@ const Projects = () => {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2 text-sm font-medium text-center transition-colors duration-200 rounded-lg bg-secondary-100 hover:bg-blue-100 text-secondary-700 hover:text-blue-700"
+                    className="flex-1 py-2 text-sm font-medium text-center transition-colors duration-200 border rounded-lg bg-white/5 hover:bg-white/10 border-white/10 text-slate-100 hover:text-sky-200"
                   >
                     View Code
                   </motion.a>
@@ -188,7 +188,7 @@ const Projects = () => {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2 text-sm font-medium text-center text-white transition-colors duration-200 rounded-lg bg-primary-600 hover:bg-primary-700"
+                    className="flex-1 py-2 text-sm font-medium text-center transition-colors duration-200 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950"
                   >
                     Live Demo
                   </motion.a>

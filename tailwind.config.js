@@ -33,7 +33,7 @@ module.exports = {
           900: '#1f1f1f',
         },
         // Brand accent - deep charcoal for minimalist elegance
-        brand: '#2d2d2d'
+        brand: '#000000'
       },
       fontFamily: {
         'sans': ['Inter', 'system-ui', 'sans-serif'],

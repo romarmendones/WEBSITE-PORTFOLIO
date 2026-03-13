@@ -5,13 +5,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    background-color: #ffffff;
+    background-color: #000000;
   }
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
-    background-color: #ffffff;
-    color: #2d2d2d;
+    background-color: #000000;
+    color: #ffffff;
   }
 }
 
