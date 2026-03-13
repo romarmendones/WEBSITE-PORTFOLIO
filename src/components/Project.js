@@ -18,7 +18,7 @@ const Projects = () => {
         description: 'A  Capstone Project full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, payment integration, and admin dashboard.',
       image:require('../image/SmartStocks.png'),
       category: 'web',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe', 'Redux'],
+      technologies: ['REACT','SUPABASE', 'Tailwind CSS',],
       github: 'https://github.com',
       live: 'https://smart-stacks-manager-web.vercel.app/',
       featured: true
@@ -29,7 +29,7 @@ const Projects = () => {
       description: 'A coffee shop website with a responsive design and smooth animations.',
       image: require('../image/Coffee.jpg'),
       category: 'web',
-      technologies: ['React', 'Supabase', 'Tailwind CSS', 'Framer Motion'],
+      technologies: ['REACT', 'SUPABASE', 'Tailwind CSS', 'Framer Motion'],
       github: 'https://github.com',
       live: 'https://coffee-shop16.vercel.app/',
       featured: true
@@ -40,7 +40,7 @@ const Projects = () => {
     description: ' Coffee Shop',
   image:require('../image/Coffee1.jpg'),
   category: 'web',
-  technologies: ['Vue.js', 'Tailwind CSS',''],
+  technologies: ['VUE.JS', 'Tailwind CSS',],
   github: 'https://github.com',
   live: 'https://coffee-brew-bean-shop.vercel.app//',
   featured: true
