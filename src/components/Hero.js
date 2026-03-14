@@ -76,8 +76,8 @@ const Hero = () => {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   const link = document.createElement('a');
-                  link.href = '/Rodanto_Mendones_Resume_OnePage.pdf';
-                  link.download = 'Rodanto_Mendones_Resume_OnePage.pdf';
+                  link.view = '/RESUME-Mendones-Rodanto.pdf';
+                  link.href = 'RESUME-Mendones-Rodanto.pdf';
                   document.body.appendChild(link);
                   link.click();
                   document.body.removeChild(link);
@@ -109,8 +109,8 @@ const Hero = () => {
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                href="https://github.com/romarmendones"
-                target="https://github.com/romarmendones"
+                href="https://github.com/romarmendones?tab=repositories"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 transition-all duration-200 border rounded-full text-slate-100 bg-white/5 hover:bg-white/10 border-white/10"
               >
@@ -143,7 +143,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 href="https://www.facebook.com/romar.mendones"
-                target="https://www.facebook.com/romar.mendones"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 transition-all duration-200 border rounded-full text-slate-100 bg-white/5 hover:bg-white/10 border-white/10"
               >
