@@ -82,21 +82,12 @@ const Hero = () => {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="flex items-center space-x-2 btn-primary"
+                className="flex items-center space-x-2 px-6 py-3 font-medium text-sky-400 bg-transparent border border-sky-400 rounded-lg hover:bg-sky-400/10 transition-colors duration-200"
               >
                 <FiDownload className="w-5 h-5" />
                 <span>Download Resume</span>
               </motion.button>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={scrollToAbout}
-                className="flex items-center space-x-2 btn-secondary"
-              >
-                <span>Learn More</span>
-                <FiArrowDown className="w-5 h-5" />
-              </motion.button>
             </motion.div>
 
             {/* Social Links */}

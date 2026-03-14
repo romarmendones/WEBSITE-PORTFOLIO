@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiCode, FiDatabase, FiCloud, FiSmartphone, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCloud, FiSmartphone } from 'react-icons/fi';
 import {
   SiReact,
   SiJavascript,
@@ -92,42 +92,6 @@ const Skills = () => {
     ).values()
   );
 
-  const scrollRef = useRef(null);
-  const [itemsPerView, setItemsPerView] = useState(1);
-  const [currentPage, setCurrentPage] = useState(0);
-
-  useEffect(() => {
-    const recalc = () => {
-      const container = scrollRef.current;
-      if (!container || container.children.length === 0) return;
-      const firstChild = container.children[0];
-      const childWidth = firstChild.getBoundingClientRect().width;
-      const gap = parseFloat(getComputedStyle(container).columnGap || '0');
-      const per = Math.max(1, Math.floor((container.clientWidth + gap) / (childWidth + gap)));
-      setItemsPerView(per);
-      setCurrentPage(Math.round(container.scrollLeft / container.clientWidth));
-    };
-    recalc();
-    window.addEventListener('resize', recalc);
-    return () => window.removeEventListener('resize', recalc);
-  }, []);
-
-  const totalPages = Math.max(1, Math.ceil(allSkills.length / itemsPerView));
-
-  const handleScroll = () => {
-    const container = scrollRef.current;
-    if (!container) return;
-    setCurrentPage(Math.round(container.scrollLeft / container.clientWidth));
-  };
-
-  const goToPage = (index) => {
-    const container = scrollRef.current;
-    if (!container) return;
-    const clamped = Math.max(0, Math.min(totalPages - 1, index));
-    container.scrollTo({ left: clamped * container.clientWidth, behavior: 'smooth' });
-    setCurrentPage(clamped);
-  };
-
   return (
     <section
       id="skills"
@@ -166,34 +130,33 @@ const Skills = () => {
         </motion.div>
 
         <div className="relative">
-          <div className="p-4 mx-auto border rounded-full shadow-inner bg-white/5 backdrop-blur border-white/10">
-            <div className="relative">
-              <button
-                type="button"
-                aria-label="Previous"
-                onClick={() => goToPage(currentPage - 1)}
-                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -left-3 top-1/2 bg-white/10 md:flex hover:bg-white/15 border-white/10"
-              >
-                <FiChevronLeft className="w-4 h-4 text-slate-100" />
-              </button>
-              <button
-                type="button"
-                aria-label="Next"
-                onClick={() => goToPage(currentPage + 1)}
-                className="absolute z-10 items-center justify-center hidden p-2 -translate-y-1/2 border rounded-full shadow -right-3 top-1/2 bg-white/10 md:flex hover:bg-white/15 border-white/10"
-              >
-                <FiChevronRight className="w-4 h-4 text-slate-100" />
-              </button>
-
-              <div
-                ref={scrollRef}
-                onScroll={handleScroll}
-                className="flex gap-8 px-6 py-2 overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar"
-              >
-                {allSkills.map((skill) => {
+          <div 
+            className="p-4 mx-auto border rounded-full shadow-inner bg-white/5 backdrop-blur border-white/10 overflow-hidden"
+            style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}
+          >
+            <div className="flex gap-8 group">
+              <div className="flex gap-8 px-6 py-2 animate-scroll min-w-max group-hover:[animation-play-state:paused]">
+                {allSkills.map((skill, idx) => {
                   const Icon = skillIconMap[skill.name];
                   return (
-                    <div key={skill.name} className="snap-start shrink-0 w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] flex flex-col items-center justify-center gap-3">
+                    <div key={`${skill.name}-1-${idx}`} className="shrink-0 w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] flex flex-col items-center justify-center gap-3">
+                      <div className="flex items-center justify-center w-20 h-20 border rounded-2xl bg-white/5 border-white/10">
+                        {Icon ? (
+                          <Icon className="w-10 h-10 text-slate-100" />
+                        ) : (
+                          <span className="text-lg text-slate-100">{skill.name[0]}</span>
+                        )}
+                      </div>
+                      <div className="text-sm font-medium text-slate-200">{skill.name}</div>
+                    </div>
+                  );
+                })}
+              </div>
+              <div aria-hidden="true" className="flex gap-8 px-6 py-2 animate-scroll min-w-max group-hover:[animation-play-state:paused]">
+                {allSkills.map((skill, idx) => {
+                  const Icon = skillIconMap[skill.name];
+                  return (
+                    <div key={`${skill.name}-2-${idx}`} className="shrink-0 w-[220px] sm:w-[240px] md:w-[260px] lg:w-[280px] flex flex-col items-center justify-center gap-3">
                       <div className="flex items-center justify-center w-20 h-20 border rounded-2xl bg-white/5 border-white/10">
                         {Icon ? (
                           <Icon className="w-10 h-10 text-slate-100" />
@@ -207,23 +170,17 @@ const Skills = () => {
                 })}
               </div>
             </div>
-
-            <div className="flex items-center justify-center gap-2 mt-3">
-              {Array.from({ length: totalPages }).map((_, i) => (
-                <button
-                  key={i}
-                  aria-label={`Go to slide ${i + 1}`}
-                  onClick={() => goToPage(i)}
-                  className={`h-1.5 w-1.5 rounded-full transition-all ${i === currentPage ? 'w-3 bg-slate-100' : 'bg-white/30'}`}
-                />)
-              )}
-            </div>
           </div>
         </div>
       </div>
       <style>{`
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(calc(-100% - 2rem)); }
+        }
+        .animate-scroll {
+          animation: scroll 30s linear infinite;
+        }
       `}</style>
     </section>
   );
