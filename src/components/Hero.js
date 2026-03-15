@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiArrowDown, FiGithub, FiLinkedin, FiDownload, FiFacebook, FiInstagram } from 'react-icons/fi';
 import { SiGmail } from 'react-icons/si';
-import WhiteGhost from '../image/WhiteGhost.jpg';
+import Romar from '../image/Romar.jpg';
 
 const Hero = () => {
   const scrollToAbout = () => {
@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-slate-950/80 to-slate-900/80"></div>
       <div className="absolute rounded-full top-20 left-10 w-72 h-72 bg-indigo-500/15 filter blur-3xl opacity-70 animate-bounce-slow"></div>
       <div className="absolute rounded-full bottom-20 right-10 w-72 h-72 bg-fuchsia-500/15 filter blur-3xl opacity-70 animate-bounce-slow" style={{ animationDelay: '1s' }}></div>
-      
+
       <div className="relative z-10 px-4 container-custom sm:px-6 lg:px-8">
         <div className="flex flex-col items-center justify-between gap-10 text-center md:flex-row md:text-left">
           {/* Left: Text Content */}
@@ -60,7 +60,7 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.3 }}
               className="max-w-2xl mx-auto mb-8 text-lg text-slate-300 md:mx-0"
             >
-              I create beautiful, functional, and user-centered digital experiences. 
+              I create beautiful, functional, and user-centered digital experiences.
               Passionate about clean code, innovative design, and building products that make a difference.
             </motion.p>
 
@@ -87,7 +87,7 @@ const Hero = () => {
                 <FiDownload className="w-5 h-5" />
                 <span>Download Resume</span>
               </motion.button>
-              
+
             </motion.div>
 
             {/* Social Links */}
@@ -107,7 +107,7 @@ const Hero = () => {
               >
                 <FiGithub className="w-6 h-6" />
               </motion.a>
-              
+
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -118,7 +118,7 @@ const Hero = () => {
               >
                 <FiLinkedin className="w-6 h-6" />
               </motion.a>
-              
+
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -129,7 +129,7 @@ const Hero = () => {
               >
                 <SiGmail className="w-6 h-6" />
               </motion.a>
-              
+
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
@@ -164,7 +164,7 @@ const Hero = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-sky-500/30 blur-3xl rounded-2xl -z-10"></div>
               <img
-                src={WhiteGhost}
+                src={Romar}
                 alt="Profile"
                 className="object-cover border-4 border-sky-400 rounded-2xl shadow-2xl w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96"
               />
