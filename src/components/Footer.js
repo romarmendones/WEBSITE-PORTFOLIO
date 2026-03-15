@@ -11,7 +11,6 @@ const Footer = () => {
       links: [
         { name: 'Home', href: '#home' },
         { name: 'About', href: '#about' },
-        { name: 'Experience', href: '#experience' },
         { name: 'Projects', href: '#projects' },
       ]
     },
@@ -39,9 +38,9 @@ const Footer = () => {
 
       <div className="container-custom px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
-          
+
           {/* Brand & Bio */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -54,7 +53,7 @@ const Footer = () => {
             <p className="text-secondary-400 mb-8 max-w-sm leading-relaxed text-sm">
               Crafting elegant digital experiences through clean code and modern design. Always eager to explore new technologies and solve real-world problems.
             </p>
-            
+
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
                 <motion.a
@@ -91,7 +90,7 @@ const Footer = () => {
                 <ul className="space-y-4">
                   {group.links.map((link) => (
                     <li key={link.name}>
-                      <a 
+                      <a
                         href={link.href}
                         className="text-secondary-400 hover:text-white transition-colors duration-200 text-sm flex items-center group"
                       >
@@ -124,7 +123,7 @@ const Footer = () => {
                   <p className="text-secondary-400 text-sm mt-1">Mauban, Quezon, Philippines</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start group">
                 <div className="mt-0.5 w-8 h-8 rounded-full bg-secondary-800/50 flex items-center justify-center text-secondary-400 group-hover:text-primary-50 group-hover:bg-secondary-700/80 transition-all duration-300 mr-4 flex-shrink-0">
                   <FiMail className="w-4 h-4" />
@@ -153,7 +152,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

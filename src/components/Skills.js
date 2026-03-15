@@ -1,20 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiCode, FiDatabase, FiCloud, FiSmartphone } from 'react-icons/fi';
+import { FiCode, FiDatabase, FiCloud } from 'react-icons/fi';
 import {
   SiReact,
   SiJavascript,
   SiTypescript,
-  SiCss3,
   SiTailwindcss,
   SiNodedotjs,
-  SiExpress,
   SiPython,
+  SiLaravel,
   SiSupabase,
   SiGit,
-  
-  
+
+
 } from 'react-icons/si';
 
 const Skills = () => {
@@ -28,59 +27,45 @@ const Skills = () => {
       title: 'Frontend Development',
       icon: FiCode,
       skills: [
-        { name: 'React.js',  },
-        { name: 'JavaScript',  },
-        { name: 'TypeScript'},
-        { name: 'HTML/CSS',  },
-        { name: 'Tailwind CSS',  },
-        
+        { name: 'React.js', },
+        { name: 'JavaScript', },
+        { name: 'TypeScript' },
+        { name: 'Laravel', },
+        { name: 'Tailwind CSS', },
+
       ]
     },
     {
       title: 'Backend Development',
       icon: FiDatabase,
       skills: [
-        { name: 'Node.js',  },
-        { name: 'Express.js', },
-        { name: 'Python',  },
-        { name: 'Supabase',  },
+        { name: 'Node.js', },
+        { name: 'Python', },
+        { name: 'Supabase', },
       ]
     },
     {
       title: 'Cloud & DevOps',
       icon: FiCloud,
       skills: [
-      { name: 'Git', },
-       
+        { name: 'Git', },
+
       ]
     },
-    {
-      title: 'Mobile Development',
-      icon: FiSmartphone,
-      skills: [
-        { name: 'React Native',  },
-       
-       
-        
-      ]
-    },
-    
   ];
 
   const skillIconMap = {
     'React.js': SiReact,
     'JavaScript': SiJavascript,
     'TypeScript': SiTypescript,
-    'HTML/CSS': SiCss3,
     'Tailwind CSS': SiTailwindcss,
+    'Laravel': SiLaravel,
     'Node.js': SiNodedotjs,
-    'Express.js': SiExpress,
     'Python': SiPython,
     'Supabase': SiSupabase,
     'Git': SiGit,
-    'React Native': SiReact,
-    
-    
+
+
   };
 
   // Build a flat, unique skill list for the icon carousel
@@ -125,12 +110,12 @@ const Skills = () => {
             MY <span className="gradient-text">SKILLS</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-slate-300">
-           
+
           </p>
         </motion.div>
 
         <div className="relative">
-          <div 
+          <div
             className="p-4 mx-auto border rounded-full shadow-inner bg-white/5 backdrop-blur border-white/10 overflow-hidden"
             style={{ maskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)", WebkitMaskImage: "linear-gradient(to right, transparent, black 10%, black 90%, transparent)" }}
           >

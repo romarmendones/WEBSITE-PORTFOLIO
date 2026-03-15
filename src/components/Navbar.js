@@ -20,7 +20,6 @@ const Navbar = () => {
     { name: 'About', href: '#about', icon: FiUser },
     { name: 'Skills', href: '#skills', icon: FiCode },
     { name: 'Projects', href: '#projects', icon: FiBriefcase },
-    { name: 'Experience', href: '#experience', icon: FiBriefcase },
     { name: 'Contact', href: '#contact', icon: FiMail },
   ];
 
@@ -37,11 +36,10 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled
+      className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
           ? 'bg-slate-950/80 backdrop-blur-md shadow-lg shadow-black/20 border-b border-white/10'
           : 'bg-transparent'
-      }`}
+        }`}
     >
       <div className="px-4 container-custom sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
@@ -50,8 +48,8 @@ const Navbar = () => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            
-      </motion.div>
+
+          </motion.div>
 
           {/* Desktop Navigation */}
           <div className="hidden space-x-8 md:flex">
