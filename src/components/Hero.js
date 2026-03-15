@@ -95,7 +95,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex justify-center space-x-6 md:justify-start"
+              className="flex flex-wrap justify-center gap-4 sm:gap-6 md:justify-start"
             >
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}

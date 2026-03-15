@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FiGithub, FiExternalLink, FiSmartphone, FiGlobe } from 'react-icons/fi';
+import { FiGithub, FiExternalLink, FiGlobe } from 'react-icons/fi';
 
 const Projects = () => {
   const [ref, inView] = useInView({
@@ -15,10 +15,10 @@ const Projects = () => {
     {
       id: 1,
       title: 'SmartStocks',
-        description: 'A  Capstone Project full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, payment integration, and admin dashboard.',
-      image:require('../image/SmartStocks.png'),
+      description: 'A  Capstone Project full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, payment integration, and admin dashboard.',
+      image: require('../image/SmartStocks.png'),
       category: 'web',
-      technologies: ['REACT','SUPABASE', 'Tailwind CSS',],
+      technologies: ['REACT', 'SUPABASE', 'Tailwind CSS',],
       github: 'https://github.com',
       live: 'https://smart-stacks-manager-web.vercel.app/',
       featured: true
@@ -33,31 +33,29 @@ const Projects = () => {
       github: 'https://github.com',
       live: 'https://coffee-shop16.vercel.app/',
       featured: true
-},
-{
-  id: 3,
-  title:'Brew & Bean',
-    description: ' Coffee Shop',
-  image:require('../image/Coffee1.jpg'),
-  category: 'web',
-  technologies: ['VUE.JS', 'Tailwind CSS',],
-  github: 'https://github.com',
-  live: 'https://coffee-brew-bean-shop.vercel.app//',
-  featured: true
-},
+    },
+    {
+      id: 3,
+      title: 'Brew & Bean',
+      description: ' Coffee Shop',
+      image: require('../image/Coffee1.jpg'),
+      category: 'web',
+      technologies: ['VUE.JS', 'Tailwind CSS',],
+      github: 'https://github.com',
+      live: 'https://coffee-brew-bean-shop.vercel.app//',
+      featured: true
+    },
 
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
   ];
 
   const filters = [
-    { id: 'web', label: 'Web Development' },
-    { id: 'mobile', label: 'Mobile Development' },
-    
+    { id: 'web', label: 'WEB DEVELOPMENT' },
   ];
 
   const filteredProjects = projects.filter(project => {
@@ -77,10 +75,10 @@ const Projects = () => {
           className="mb-16 text-center"
         >
           <h2 className="mb-4 text-4xl font-bold text-slate-100">
-            My <span className="gradient-text">Projects</span>
+            MY <span className="gradient-text">PROJECTS</span>
           </h2>
           <p className="max-w-2xl mx-auto text-lg text-slate-300">
-            Explore my latest work and creative solutions across various technologies
+            HERE'S MY LATEST WORK AND CREATIVE SOLUTIONS ACROSS VARIOUS TECHNOLOGIES
           </p>
         </motion.div>
 
@@ -97,11 +95,10 @@ const Projects = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${
-                activeFilter === filter.id
-                  ? 'bg-sky-500 text-slate-950 shadow-lg shadow-black/30'
-                  : 'bg-white/5 text-slate-200 hover:bg-white/10 border border-white/10'
-              }`}
+              className={`px-6 py-2 rounded-full font-medium transition-all duration-200 ${activeFilter === filter.id
+                ? 'bg-sky-500 text-slate-950 shadow-lg shadow-black/30'
+                : 'bg-white/5 text-slate-200 hover:bg-white/10 border border-white/10'
+                }`}
             >
               {filter.label}
             </motion.button>
@@ -159,14 +156,10 @@ const Projects = () => {
               {/* Project Content */}
               <div className="p-6">
                 <div className="flex items-center mb-3 space-x-2">
-                  {project.category === 'mobile' ? (
-                    <FiSmartphone className="w-4 h-4 text-sky-300" />
-                  ) : (
-                    <FiGlobe className="w-4 h-4 text-sky-300" />
-                  )}
+                  <FiGlobe className="w-4 h-4 text-sky-300" />
                   <span className="text-sm capitalize text-slate-400">{project.category}</span>
                 </div>
-                
+
                 <h3 className="mb-3 text-xl font-bold text-slate-100">{project.title}</h3>
                 <p className="mb-4 text-sm leading-relaxed text-slate-300">
                   {project.description}
@@ -185,7 +178,7 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex space-x-3">
+                <div className="flex flex-col sm:flex-row gap-3">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}

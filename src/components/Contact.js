@@ -102,9 +102,9 @@ const Contact = () => {
                   <div className="w-12 h-12 border rounded-lg flex items-center justify-center bg-white/5 border-white/10 group-hover:bg-white/10 transition-colors duration-200">
                     <info.icon className="w-6 h-6 text-sky-300" />
                   </div>
-                  <div>
+                  <div className="min-w-0">
                     <h4 className="font-semibold text-slate-100">{info.title}</h4>
-                    <p className="text-slate-300">{info.value}</p>
+                    <p className="text-slate-300 break-all sm:break-normal">{info.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -115,7 +115,7 @@ const Contact = () => {
               <h4 className="text-lg font-semibold text-slate-100 mb-4">
                 Follow Me
               </h4>
-              <div className="flex space-x-4">
+              <div className="flex flex-wrap justify-center gap-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
                     key={social.name}
