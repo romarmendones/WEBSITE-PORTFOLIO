@@ -162,11 +162,11 @@ const Hero = () => {
             className="flex justify-center w-full md:w-1/2"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-sky-500/30 blur-3xl rounded-full -z-10"></div>
+              <div className="absolute inset-0 bg-sky-500/30 blur-3xl rounded-2xl -z-10"></div>
               <img
                 src={WhiteGhost}
                 alt="Profile"
-                className="object-cover border-4 border-sky-400 rounded-full shadow-2xl w-56 h-56 sm:w-64 sm:h-64 lg:w-80 lg:h-80"
+                className="object-cover border-4 border-sky-400 rounded-2xl shadow-2xl w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96"
               />
             </div>
           </motion.div>
