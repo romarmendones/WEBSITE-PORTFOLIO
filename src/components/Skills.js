@@ -12,6 +12,7 @@ import {
   SiLaravel,
   SiSupabase,
   SiGit,
+  SiPhp,
 
 
 } from 'react-icons/si';
@@ -32,6 +33,7 @@ const Skills = () => {
         { name: 'TypeScript' },
         { name: 'Laravel', },
         { name: 'Tailwind CSS', },
+        { name: 'PHP', },
 
       ]
     },
@@ -64,6 +66,7 @@ const Skills = () => {
     'Python': SiPython,
     'Supabase': SiSupabase,
     'Git': SiGit,
+    'PHP': SiPhp,
 
 
   };
