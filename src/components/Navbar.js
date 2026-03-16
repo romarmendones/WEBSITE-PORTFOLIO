@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FiMenu, FiX, FiHome, FiUser, FiCode, FiBriefcase, FiMail } from 'react-icons/fi';
+import { FiMenu, FiX, FiHome, FiCode, FiBriefcase, FiMail } from 'react-icons/fi';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +17,6 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'Home', href: '#home', icon: FiHome },
-    { name: 'About', href: '#about', icon: FiUser },
     { name: 'Skills', href: '#skills', icon: FiCode },
     { name: 'Projects', href: '#projects', icon: FiBriefcase },
     { name: 'Contact', href: '#contact', icon: FiMail },
@@ -37,8 +36,8 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled
-          ? 'bg-slate-950/80 backdrop-blur-md shadow-lg shadow-black/20 border-b border-white/10'
-          : 'bg-transparent'
+        ? 'bg-slate-950/80 backdrop-blur-md shadow-lg shadow-black/20 border-b border-white/10'
+        : 'bg-transparent'
         }`}
     >
       <div className="px-4 container-custom sm:px-6 lg:px-8">
