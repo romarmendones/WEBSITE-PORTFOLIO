@@ -28,10 +28,7 @@ const About = () => {
   ];
 
   const stats = [
-    { label: 'Projects Completed', value: '10+' },
-    { label: 'Technologies Used', value: '15+' },
-    { label: 'Cups of Coffee', value: '∞' },
-    { label: 'GitHub Repos', value: '20+' },
+    
   ];
 
   const socialLinks = [
@@ -103,7 +100,7 @@ const About = () => {
             <div className="relative group">
               {/* Glow ring */}
               <div
-                className="absolute inset-0 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500"
+                className="absolute inset-0 transition-opacity duration-500 rounded-2xl blur-2xl opacity-60 group-hover:opacity-80"
                 style={{
                   background:
                     'linear-gradient(135deg, rgba(56,189,248,0.35) 0%, rgba(129,140,248,0.35) 100%)',
@@ -119,7 +116,7 @@ const About = () => {
                 <img
                   src={Romar}
                   alt="Romar Mendones"
-                  className="object-cover rounded-xl w-56 h-56 sm:w-72 sm:h-72"
+                  className="object-cover w-56 h-56 rounded-xl sm:w-72 sm:h-72"
                 />
               </div>
 
@@ -127,7 +124,7 @@ const About = () => {
               <motion.div
                 animate={{ y: [0, -6, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -bottom-4 -right-4 px-4 py-2 text-sm font-semibold rounded-xl text-sky-300 bg-slate-800 border border-sky-500/30 shadow-lg"
+                className="absolute px-4 py-2 text-sm font-semibold border shadow-lg -bottom-4 -right-4 rounded-xl text-sky-300 bg-slate-800 border-sky-500/30"
               >
                 💻 Frontend Dev
               </motion.div>
@@ -145,7 +142,7 @@ const About = () => {
                   key={stat.label}
                   variants={itemVariants}
                   whileHover={{ scale: 1.04 }}
-                  className="flex flex-col items-center justify-center p-4 text-center border rounded-xl bg-white/5 border-white/10 hover:border-sky-500/40 transition-colors duration-200"
+                  className="flex flex-col items-center justify-center p-4 text-center transition-colors duration-200 border rounded-xl bg-white/5 border-white/10 hover:border-sky-500/40"
                 >
                   <span className="text-3xl font-bold text-sky-300">
                     {stat.value}
@@ -196,10 +193,10 @@ const About = () => {
               </h3>
               <div className="space-y-3 text-base leading-relaxed text-slate-400">
                 <p>
-                  I'm a passionate <span className="text-slate-200 font-medium">Frontend Developer</span> from the Philippines with a love for crafting beautiful, intuitive, and performant web applications. I enjoy turning complex problems into simple, elegant digital experiences.
+                  I'm a passionate <span className="font-medium text-slate-200">Frontend Developer</span> from the Philippines with a love for crafting beautiful, intuitive, and performant web applications. I enjoy turning complex problems into simple, elegant digital experiences.
                 </p>
                 <p>
-                  My journey in tech started with curiosity and a cup of coffee ☕ — and it hasn't stopped since. I specialize in <span className="text-slate-200 font-medium">React.js</span>, modern JavaScript (ES6+), and responsive UI design. I believe great code should not only work but also tell a story.
+                  My journey in tech started with curiosity and a cup of coffee ☕ — and it hasn't stopped since. I specialize in <span className="font-medium text-slate-200">React.js</span>, modern JavaScript (ES6+), and responsive UI design. I believe great code should not only work but also tell a story.
                 </p>
                 <p>
                   When I'm not coding, you'll find me exploring new technologies, working on personal projects, or simply enjoying the beauty of a well-crafted design. I'm always open to new opportunities and collaborations!
@@ -212,7 +209,7 @@ const About = () => {
 
             {/* Personal Info Cards */}
             <div>
-              <h3 className="mb-5 text-lg font-semibold text-slate-200 tracking-wide">
+              <h3 className="mb-5 text-lg font-semibold tracking-wide text-slate-200">
                 Personal Information
               </h3>
               <motion.div
@@ -226,13 +223,13 @@ const About = () => {
                     key={info.label}
                     variants={itemVariants}
                     whileHover={{ scale: 1.02 }}
-                    className="flex items-center gap-3 p-3 border rounded-xl bg-white/5 border-white/10 hover:border-sky-500/30 transition-all duration-200"
+                    className="flex items-center gap-3 p-3 transition-all duration-200 border rounded-xl bg-white/5 border-white/10 hover:border-sky-500/30"
                   >
-                    <div className="flex items-center justify-center flex-shrink-0 w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/20">
+                    <div className="flex items-center justify-center flex-shrink-0 border rounded-lg w-9 h-9 bg-sky-500/10 border-sky-500/20">
                       <info.icon className="w-4 h-4 text-sky-300" />
                     </div>
                     <div className="min-w-0">
-                      <p className="text-xs font-medium text-slate-500 uppercase tracking-wider">
+                      <p className="text-xs font-medium tracking-wider uppercase text-slate-500">
                         {info.label}
                       </p>
                       <p className="text-sm font-medium truncate text-slate-200">

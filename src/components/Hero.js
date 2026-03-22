@@ -82,7 +82,7 @@ const Hero = () => {
                   link.click();
                   document.body.removeChild(link);
                 }}
-                className="flex items-center space-x-2 px-6 py-3 font-medium text-sky-400 bg-transparent border border-sky-400 rounded-lg hover:bg-sky-400/10 transition-colors duration-200"
+                className="flex items-center px-6 py-3 space-x-2 font-medium transition-colors duration-200 bg-transparent border rounded-lg text-sky-400 border-sky-400 hover:bg-sky-400/10"
               >
                 <FiDownload className="w-5 h-5" />
                 <span>Download Resume</span>
@@ -166,7 +166,7 @@ const Hero = () => {
               <img
                 src={Romar}
                 alt="Profile"
-                className="object-cover border-4 border-sky-400 rounded-2xl shadow-2xl w-64 h-64 sm:w-72 sm:h-72 lg:w-96 lg:h-96"
+                className="object-cover w-64 h-64 border-4 shadow-2xl border-sky-400 rounded-2xl sm:w-72 sm:h-72 lg:w-96 lg:h-96"
               />
             </div>
           </motion.div>
@@ -184,7 +184,7 @@ const Hero = () => {
           onClick={scrollToAbout}
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="text-sky-300 transition-colors duration-200 hover:text-sky-200"
+          className="transition-colors duration-200 text-sky-300 hover:text-sky-200"
         >
           <FiArrowDown className="w-6 h-6" />
         </motion.button>
