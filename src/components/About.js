@@ -21,7 +21,7 @@ const About = () => {
   const personalInfo = [
     { label: 'Full Name', value: 'Rodanto Mari Novis Mendones', icon: FiUser },
     { label: 'Location', value: 'Philippines', icon: FiMapPin },
-    { label: 'Email', value: 'romarmendones@gmail.com', icon: FiMail },
+    { label: 'Email', value: 'romarmendones24@gmail.com', icon: FiMail },
     { label: 'Role', value: 'Frontend Developer', icon: FiBriefcase },
     { label: 'Education', value: 'BS Information Technology', icon: FiBook },
     { label: 'Interests', value: 'Tech, Coffee & Creativity', icon: FiHeart },
