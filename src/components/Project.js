@@ -41,8 +41,8 @@ const Projects = () => {
       image: require('../image/Coffee1.jpg'),
       category: 'web',
       technologies: ['VUE.JS', 'Tailwind CSS',],
-      github: 'https://github.com',
-      live: 'https://coffee-brew-bean-shop.vercel.app//',
+      github: 'https://github.com/romarmendones/coffee-Brew-Bean-Shop',
+      live: 'https://coffee-brew-bean-shop.vercel.app/',
       featured: true
     },
 
