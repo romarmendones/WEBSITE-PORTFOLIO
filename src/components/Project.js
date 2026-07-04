@@ -23,17 +23,7 @@ const Projects = () => {
       live: 'https://smart-stacks-manager-web.vercel.app/',
       featured: true
     },
-    {
-      id: 2,
-      title: 'Coffee Shop',
-      description: 'A coffee shop website with a responsive design and smooth animations.',
-      image: require('../image/Coffee.jpg'),
-      category: 'web',
-      technologies: ['REACT', 'SUPABASE', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://github.com',
-      live: 'https://coffee-shop16.vercel.app/',
-      featured: true
-    },
+    
     {
       id: 3,
       title: 'Brew & Bean',
@@ -178,7 +168,7 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col gap-3 sm:flex-row">
                   <motion.a
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
