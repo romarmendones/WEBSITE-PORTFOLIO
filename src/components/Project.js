@@ -25,7 +25,7 @@ const Projects = () => {
     },
     
     {
-      id: 3,
+      id: 2,
       title: 'Brew & Bean',
       description: ' Coffee Shop',
       image: require('../image/Coffee1.jpg'),
